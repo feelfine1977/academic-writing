@@ -1,0 +1,14 @@
+.venv/
+data/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+tmp/
+artifacts/
+Private library/
+Papers/
+Learning/
+local-settings.json
+*.sqlite3*
+.env

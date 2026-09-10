@@ -1,0 +1,4947 @@
+{
+  "schema": "awl.exercise-pack.v1",
+  "pack_id": "AWL-EN-CORE",
+  "version": 2,
+  "title": "English in research · 120 focused drills",
+  "created": "2026-09-09",
+  "origin": "original_authored_tasks_with_research_specific_scaffolds",
+  "independent_content_review": "pending",
+  "sources": [
+    {
+      "id": "BOOKS",
+      "title": "Original examples informed by the three supplied writing books; see the reading guide."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "AWL-EN-F01-Q01",
+      "version": 1,
+      "title": "Plural subjects · 1",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe constraints in this specification ___ explicit parameters.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q02",
+      "version": 1,
+      "title": "Plural subjects · 2",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe results of the sensitivity analysis ___ interpretation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q03",
+      "version": 1,
+      "title": "Plural subjects · 3",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe assumptions behind these scores ___ documentation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q04",
+      "version": 1,
+      "title": "Plural subjects · 4",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe activities recorded in both logs ___ consistent labels.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q05",
+      "version": 1,
+      "title": "Plural subjects · 5",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe differences between stakeholder priorities ___ explanation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q06",
+      "version": 1,
+      "title": "Plural subjects · 6",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe measurements for each purchasing document ___ validation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q07",
+      "version": 1,
+      "title": "Plural subjects · 7",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe groups with limited support ___ careful interpretation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q08",
+      "version": 1,
+      "title": "Plural subjects · 8",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe limitations of this comparison ___ discussion.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q09",
+      "version": 1,
+      "title": "Plural subjects · 9",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe questions raised by the reviewers ___ specific answers.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F01-Q10",
+      "version": 1,
+      "title": "Plural subjects · 10",
+      "prompt": "Find the head of the subject; a phrase after it does not change its number.\n\nThe links from each priority to its evidence ___ preservation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "require",
+        "requires"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Find the head of the subject; a phrase after it does not change its number."
+        }
+      ],
+      "family": "Plural subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q01",
+      "version": 1,
+      "title": "Singular subjects · 1",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe interpretation of these signals ___ on context.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q02",
+      "version": 1,
+      "title": "Singular subjects · 2",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe relevance of both indicators ___ on the objective.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q03",
+      "version": 1,
+      "title": "Singular subjects · 3",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe reliability of the recorded timestamps ___ on the logging system.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q04",
+      "version": 1,
+      "title": "Singular subjects · 4",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe meaning of these labels ___ on their definitions.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q05",
+      "version": 1,
+      "title": "Singular subjects · 5",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe comparison between the two groups ___ on a shared baseline.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q06",
+      "version": 1,
+      "title": "Singular subjects · 6",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe selection of eligible cases ___ on the applicability rule.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q07",
+      "version": 1,
+      "title": "Singular subjects · 7",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe usefulness of the explanations ___ on the reader’s task.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q08",
+      "version": 1,
+      "title": "Singular subjects · 8",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe validity of the conclusions ___ on the evidence.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q09",
+      "version": 1,
+      "title": "Singular subjects · 9",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe construction of meaningful event logs ___ on activity semantics.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F02-Q10",
+      "version": 1,
+      "title": "Singular subjects · 10",
+      "prompt": "A singular head takes a singular verb even when a nearby noun is plural.\n\nThe reproducibility of the rankings ___ on retained configuration.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "depend",
+        "depends"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A singular head takes a singular verb even when a nearby noun is plural."
+        }
+      ],
+      "family": "Singular subjects"
+    },
+    {
+      "id": "AWL-EN-F03-Q01",
+      "version": 1,
+      "title": "Articles and reference · 1",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nWe introduce ___ explicit criterion for selecting cases.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q02",
+      "version": 1,
+      "title": "Articles and reference · 2",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nWe propose ___ method for organising review groups.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q03",
+      "version": 1,
+      "title": "Articles and reference · 3",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nAn event log was imported. We then checked ___ event log for missing timestamps.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q04",
+      "version": 1,
+      "title": "Articles and reference · 4",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nThe researcher selected ___ unusual case for inspection.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q05",
+      "version": 1,
+      "title": "Articles and reference · 5",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nWe define ___ reproducible grouping rule.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q06",
+      "version": 1,
+      "title": "Articles and reference · 6",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nTwo versions were tested. ___ first version used the original threshold.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q07",
+      "version": 1,
+      "title": "Articles and reference · 7",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nThis section provides ___ overview of the evaluation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q08",
+      "version": 1,
+      "title": "Articles and reference · 8",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nA baseline was fixed before scoring. All groups were compared with ___ baseline.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q09",
+      "version": 1,
+      "title": "Articles and reference · 9",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nThe analysis revealed ___ unexpected difference.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F03-Q10",
+      "version": 1,
+      "title": "Articles and reference · 10",
+      "prompt": "Use a/an for one newly introduced countable item; use the when the referent is identified.\n\nWe report ___ limitation that affects the interpretation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "a",
+        "an",
+        "the"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use a/an for one newly introduced countable item; use the when the referent is identified."
+        }
+      ],
+      "family": "Articles and reference"
+    },
+    {
+      "id": "AWL-EN-F04-Q01",
+      "version": 1,
+      "title": "Research prepositions · 1",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThe conclusion depends ___ the available evidence.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q02",
+      "version": 1,
+      "title": "Research prepositions · 2",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nEach priority is linked ___ its supporting cases.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q03",
+      "version": 1,
+      "title": "Research prepositions · 3",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThe result is consistent ___ the stated assumptions.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q04",
+      "version": 1,
+      "title": "Research prepositions · 4",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThe interpretation differs ___ the original explanation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q05",
+      "version": 1,
+      "title": "Research prepositions · 5",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThis analysis provides evidence ___ concentration in the review list.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q06",
+      "version": 1,
+      "title": "Research prepositions · 6",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nWe distinguish observations ___ interpretations.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q07",
+      "version": 1,
+      "title": "Research prepositions · 7",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThe method applies ___ cases satisfying the stated condition.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q08",
+      "version": 1,
+      "title": "Research prepositions · 8",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThe choice has an effect ___ the resulting ranking.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q09",
+      "version": 1,
+      "title": "Research prepositions · 9",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nWe compare the revised output ___ the original output.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F04-Q10",
+      "version": 1,
+      "title": "Research prepositions · 10",
+      "prompt": "Learn a word together with its usual complement; keep the scientific relation explicit.\n\nThis section focuses ___ the evaluation procedure.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "on",
+        "of",
+        "to",
+        "from",
+        "with"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Learn a word together with its usual complement; keep the scientific relation explicit."
+        }
+      ],
+      "family": "Research prepositions"
+    },
+    {
+      "id": "AWL-EN-F05-Q01",
+      "version": 1,
+      "title": "Contrast constructions · 1",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the log contains many events, some timestamps are missing.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q02",
+      "version": 1,
+      "title": "Contrast constructions · 2",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the large sample, the study covers only one organisation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q03",
+      "version": 1,
+      "title": "Contrast constructions · 3",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the model predicts a delay, it does not select an intervention.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q04",
+      "version": 1,
+      "title": "Contrast constructions · 4",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ using the same evidence, the two perspectives produce different priorities.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q05",
+      "version": 1,
+      "title": "Contrast constructions · 5",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the score is low, the group contains few cases.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q06",
+      "version": 1,
+      "title": "Contrast constructions · 6",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the explicit grouping rule, responsibility still needs confirmation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q07",
+      "version": 1,
+      "title": "Contrast constructions · 7",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the procedure can be rerun, its assumptions may be unsuitable.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q08",
+      "version": 1,
+      "title": "Contrast constructions · 8",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ these limitations, the reported comparison remains informative.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q09",
+      "version": 1,
+      "title": "Contrast constructions · 9",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ the paragraph is grammatical, its conclusion lacks support.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F05-Q10",
+      "version": 1,
+      "title": "Contrast constructions · 10",
+      "prompt": "Although introduces a clause; despite takes a noun phrase or an -ing form.\n\n___ retaining the raw values, we cannot establish causation from this analysis.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S03"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "Although",
+        "Despite"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Although introduces a clause; despite takes a noun phrase or an -ing form."
+        }
+      ],
+      "family": "Contrast constructions"
+    },
+    {
+      "id": "AWL-EN-F06-Q01",
+      "version": 1,
+      "title": "Conditions · 1",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: timestamps are necessary. The lag can be calculated only ___ both timestamps exist.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q02",
+      "version": 1,
+      "title": "Conditions · 2",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: exclude cases without a receipt. A case is excluded ___ a receipt is recorded.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q03",
+      "version": 1,
+      "title": "Conditions · 3",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: comparable scope is necessary. We interpret the comparison only ___ the populations are comparable.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q04",
+      "version": 1,
+      "title": "Conditions · 4",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: retain the setting by default. The setting stays unchanged ___ the analyst revises it.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q05",
+      "version": 1,
+      "title": "Conditions · 5",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: use the rule when it applies. We evaluate this constraint ___ its applicability condition holds.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q06",
+      "version": 1,
+      "title": "Conditions · 6",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: report uncertainty except when validation resolves it. The status remains uncertain ___ validation resolves the issue.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q07",
+      "version": 1,
+      "title": "Conditions · 7",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: adequate support is necessary. The claim is accepted only ___ its evidence is sufficient.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q08",
+      "version": 1,
+      "title": "Conditions · 8",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: the backlog cannot prove benefit. An intervention benefit cannot be claimed ___ additional evidence supports it.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q09",
+      "version": 1,
+      "title": "Conditions · 9",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: save the new configuration when it changes. We create a version ___ the configuration changes.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F06-Q10",
+      "version": 1,
+      "title": "Conditions · 10",
+      "prompt": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first.\n\nIntended meaning: keep the source qualification by default. The qualification remains ___ new evidence justifies removing it.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "if",
+        "unless"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Only if states a necessary condition; unless introduces an exception. Read the intended meaning first."
+        }
+      ],
+      "family": "Conditions"
+    },
+    {
+      "id": "AWL-EN-F07-Q01",
+      "version": 1,
+      "title": "Reasons and consequences · 1",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe rule was inapplicable ___ the required activity was absent.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q02",
+      "version": 1,
+      "title": "Reasons and consequences · 2",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe timestamps were missing; ___, the lag could not be calculated.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q03",
+      "version": 1,
+      "title": "Reasons and consequences · 3",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nWe retained the raw values ___ reviewers need to inspect the evidence.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q04",
+      "version": 1,
+      "title": "Reasons and consequences · 4",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe populations differ; ___, the direct comparison needs qualification.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q05",
+      "version": 1,
+      "title": "Reasons and consequences · 5",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe paragraph needs revision ___ its main term changes meaning.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q06",
+      "version": 1,
+      "title": "Reasons and consequences · 6",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe original settings were retained; ___, the documented configuration can be inspected.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q07",
+      "version": 1,
+      "title": "Reasons and consequences · 7",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThis finding needs a citation ___ it is attributed to an earlier study.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q08",
+      "version": 1,
+      "title": "Reasons and consequences · 8",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nNo intervention was evaluated; ___, this study does not establish an intervention effect.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q09",
+      "version": 1,
+      "title": "Reasons and consequences · 9",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nWe introduced the definition earlier ___ the next paragraph relies on it.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F07-Q10",
+      "version": 1,
+      "title": "Reasons and consequences · 10",
+      "prompt": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference.\n\nThe two quantities use different units; ___, adding them directly needs justification.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S04"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "because",
+        "therefore"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Because introduces a reason; therefore marks a consequence. The premise must actually support the inference."
+        }
+      ],
+      "family": "Reasons and consequences"
+    },
+    {
+      "id": "AWL-EN-F08-Q01",
+      "version": 1,
+      "title": "Affect and effect · 1",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nChanging the threshold can ___ the ranking.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q02",
+      "version": 1,
+      "title": "Affect and effect · 2",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nWe examined the ___ of changing the scope.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q03",
+      "version": 1,
+      "title": "Affect and effect · 3",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nMissing timestamps may ___ the lag estimate.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q04",
+      "version": 1,
+      "title": "Affect and effect · 4",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nThe study does not measure an intervention ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q05",
+      "version": 1,
+      "title": "Affect and effect · 5",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nThe choice of case notion can ___ the counts.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q06",
+      "version": 1,
+      "title": "Affect and effect · 6",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nThis plot shows the ___ of the tested setting.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q07",
+      "version": 1,
+      "title": "Affect and effect · 7",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nDifferent weights may ___ which documents appear first.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q08",
+      "version": 1,
+      "title": "Affect and effect · 8",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nThe ___ of the change depends on the data.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q09",
+      "version": 1,
+      "title": "Affect and effect · 9",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nAmbiguous labels can ___ the reader’s interpretation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F08-Q10",
+      "version": 1,
+      "title": "Affect and effect · 10",
+      "prompt": "Affect is normally a verb meaning influence; effect is a noun in these examples.\n\nWe have no evidence of a causal ___ here.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "affect",
+        "effect"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Affect is normally a verb meaning influence; effect is a noun in these examples."
+        }
+      ],
+      "family": "Affect and effect"
+    },
+    {
+      "id": "AWL-EN-F09-Q01",
+      "version": 1,
+      "title": "Countable units · 1",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThis subset contains ___ cases than the original log.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q02",
+      "version": 1,
+      "title": "Countable units · 2",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe revised explanation contains ___ ambiguity.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q03",
+      "version": 1,
+      "title": "Countable units · 3",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe second group includes ___ purchasing documents.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q04",
+      "version": 1,
+      "title": "Countable units · 4",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nWe have ___ evidence for this interpretation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q05",
+      "version": 1,
+      "title": "Countable units · 5",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe filtered log contains ___ events.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q06",
+      "version": 1,
+      "title": "Countable units · 6",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe review team has ___ time available.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q07",
+      "version": 1,
+      "title": "Countable units · 7",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe revision introduces ___ new technical terms.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q08",
+      "version": 1,
+      "title": "Countable units · 8",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThis claim requires ___ speculation.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q09",
+      "version": 1,
+      "title": "Countable units · 9",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe new run produced ___ warnings.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F09-Q10",
+      "version": 1,
+      "title": "Countable units · 10",
+      "prompt": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts.\n\nThe short outline contains ___ detail.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "fewer",
+        "less"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Use fewer for a number of countable objects and less for an uncountable quantity in these contexts."
+        }
+      ],
+      "family": "Countable units"
+    },
+    {
+      "id": "AWL-EN-F10-Q01",
+      "version": 1,
+      "title": "Parallel operations · 1",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nThe tool can identify cases, compute scores and ___ raw values.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q02",
+      "version": 1,
+      "title": "Parallel operations · 2",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nThe analysts define the population, inspect the timestamps and ___ the configuration.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q03",
+      "version": 1,
+      "title": "Parallel operations · 3",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nThe procedure involves checking applicability, computing scores and ___ evidence.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q04",
+      "version": 1,
+      "title": "Parallel operations · 4",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nWe evaluated the cases, ranked the groups and ___ the outputs.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q05",
+      "version": 1,
+      "title": "Parallel operations · 5",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nThe tool can filter events, calculate lags and ___ source links.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q06",
+      "version": 1,
+      "title": "Parallel operations · 6",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nOur tasks included reviewing definitions, checking units and ___ qualifications.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q07",
+      "version": 1,
+      "title": "Parallel operations · 7",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nYesterday, we documented the scope, compared the runs and ___ both versions.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q08",
+      "version": 1,
+      "title": "Parallel operations · 8",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nAnalysts should check the assumptions, explain their choices and ___ their notes.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q09",
+      "version": 1,
+      "title": "Parallel operations · 9",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nThe workflow supports inspecting cases, comparing groups and ___ validation flags.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F10-Q10",
+      "version": 1,
+      "title": "Parallel operations · 10",
+      "prompt": "Keep coordinated operations in the same grammatical form.\n\nWe loaded the log, applied the rule and ___ the applicable cases.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S07"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "retain",
+        "retaining",
+        "retained"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Keep coordinated operations in the same grammatical form."
+        }
+      ],
+      "family": "Parallel operations"
+    },
+    {
+      "id": "AWL-EN-F11-Q01",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 1",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe figure may ___ where the priority mass is concentrated.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q02",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 2",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe analysis has ___ a difference between these runs.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q03",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 3",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe retained evidence can ___ which cases contributed.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q04",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 4",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nPrevious studies have ___ the importance of context.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q05",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 5",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nA score alone cannot ___ that an intervention will work.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q06",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 6",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe table has ___ the same pattern in both versions.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q07",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 7",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nA sensitivity check could ___ whether the ranking changes.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q08",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 8",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe authors have ___ how they selected the data.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q09",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 9",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nThe revised paragraph should ___ why the requirement follows.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F11-Q10",
+      "version": 1,
+      "title": "Verb forms after auxiliaries · 10",
+      "prompt": "A modal takes the base form; has/have take a past participle.\n\nWe have ___ the tested conditions explicitly.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S01"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "show",
+        "shown"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "A modal takes the base form; has/have take a past participle."
+        }
+      ],
+      "family": "Verb forms after auxiliaries"
+    },
+    {
+      "id": "AWL-EN-F12-Q01",
+      "version": 1,
+      "title": "Research word choice · 1",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nA capability that a solution must provide is a ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q02",
+      "version": 1,
+      "title": "Research word choice · 2",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe reviewer’s message asking us to add a figure is a ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q03",
+      "version": 1,
+      "title": "Research word choice · 3",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nWe use one ___ to select eligible cases.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q04",
+      "version": 1,
+      "title": "Research word choice · 4",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe selection uses three explicit ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q05",
+      "version": 1,
+      "title": "Research word choice · 5",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe act of recording a duration is a ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q06",
+      "version": 1,
+      "title": "Research word choice · 6",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nDuration is the quantitative ___ used in this example.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q07",
+      "version": 1,
+      "title": "Research word choice · 7",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe ___ reason for the change is clarity.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q08",
+      "version": 1,
+      "title": "Research word choice · 8",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe design follows the ___ of retaining traceable evidence.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q09",
+      "version": 1,
+      "title": "Research word choice · 9",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe values differ, but a shared scale makes them ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    },
+    {
+      "id": "AWL-EN-F12-Q10",
+      "version": 1,
+      "title": "Research word choice · 10",
+      "prompt": "Choose the word that preserves the specific relation stated in the sentence.\n\nThe two stored strings contain exactly the same characters; they are ___.\n\nChoose the missing word. This is a constructed language example, not an empirical result.",
+      "skill_ids": [
+        "S02"
+      ],
+      "format": "gap",
+      "level": "guided",
+      "source_ids": [
+        "BOOKS"
+      ],
+      "choices": [
+        "requirement",
+        "request",
+        "criterion",
+        "criteria",
+        "measurement",
+        "measure",
+        "principle",
+        "principal",
+        "comparable",
+        "identical"
+      ],
+      "parts": [],
+      "response_contract": {
+        "type": "ordered_gap_values",
+        "exact_match_allowed": true,
+        "value_count": 1
+      },
+      "assessment": "deterministic_task_fit",
+      "criteria": [
+        "Choose a form that fits the supplied context."
+      ],
+      "book_ids": [
+        "VOC",
+        "WRP",
+        "SKERN"
+      ],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Choose the word that preserves the specific relation stated in the sentence."
+        }
+      ],
+      "family": "Research word choice"
+    }
+  ]
+}

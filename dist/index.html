@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local academic writing lab for practising skills and writing your own research prose.">
+  <title>Academic Writing Lab</title>
+  <link rel="icon" href="/mark.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <aside class="sidebar">
+    <a href="#today" class="brand"><img class="brand-mark" src="/mark.svg?v=2" alt="" width="54" height="54"><span>Academic<br><strong>Writing Lab</strong></span></a>
+    <div class="sidebar-label">YOUR WORKSPACE</div>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#today" data-page="today"><span class="nav-icon">◷</span>Today</a>
+      <a href="#courses" data-page="courses"><span class="nav-icon">★</span>Courses & progress</a>
+      <a href="#papers" data-page="papers"><span class="nav-icon">▤</span>My papers</a>
+      <a href="#practice" data-page="practice"><span class="nav-icon">▤</span>Skill practice</a>
+      <a href="#writing" data-page="writing"><span class="nav-icon">✎</span>My writing</a>
+      <a href="#library" data-page="library"><span class="nav-icon">▥</span>Research library</a>
+      <a href="#obsidian" data-page="obsidian"><span class="nav-icon">◇</span>Obsidian & iPad</a>
+      <a href="#progress" data-page="progress"><span class="nav-icon">↗</span>Learning history</a>
+      <a href="#guide" data-page="guide"><span class="nav-icon">?</span>How to use the lab</a>
+      <a href="#comments" data-page="comments"><span class="nav-icon">✉</span>My comments</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="settings-link" href="#settings">⚙ <span>Settings & backups</span></a>
+      <div class="local-label"><span class="local-symbol">⌂</span> Local workspace</div>
+      <div class="profile"><span>AW</span><div>My writing workspace<small>Academic English</small></div></div>
+    </div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div><span class="crumb">Writing Lab</span><span class="slash">/</span><span id="page-label">Today</span></div><div class="topbar-actions"><button type="button" class="btn quiet" id="flag-wording">Flag unclear wording</button><a href="#settings" id="tutor-status" class="status-pill">Local tutor settings</a></div></header>
+    <section id="continue-work" class="continue-work" aria-label="Continue your work" hidden></section>
+    <section id="focus-work" class="focus-work" aria-label="Focus timer and view"></section>
+    <main id="main" tabindex="-1"><div class="loading">Opening your writing workspace…</div></main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+</body>
+</html>

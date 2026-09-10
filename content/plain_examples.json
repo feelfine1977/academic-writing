@@ -1,0 +1,418 @@
+{
+  "reference": {
+    "facts": "The curator shortened the labels. Visitors read the shortened labels more often. Understanding was not measured.",
+    "draft": "This improved this.",
+    "repair": "The curator shortened the labels, and visitors read them more often. This increase in reading does not by itself establish better understanding.",
+    "diagnosis": "The wording “This improved this.” needs attention. Both uses of “this” leave the reader guessing what changed and what improved. Name the shortened labels and the observed increase in reading; better understanding was not measured. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The curator shortened the labels, and visitors read them more often”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “This improved this.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "modifiers": {
+    "facts": "Only damaged apples were weighed; the inspector used a handheld scale.",
+    "draft": "Only the inspector weighed damaged apples.",
+    "repair": "The inspector weighed only the damaged apples. A handheld scale was used for this task.",
+    "diagnosis": "The wording “Only the inspector weighed damaged apples.” needs attention. Putting “only” before “the inspector” limits who did the weighing, rather than which apples were weighed. The supplied restriction concerns the damaged apples, so place “only” with that group. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The inspector weighed only the damaged apples”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Only the inspector weighed damaged apples.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "voice": {
+    "facts": "A protocol requires gloves. The conservator wore gloves in yesterday's trial. A durability test is planned.",
+    "draft": "The trial established durability.",
+    "repair": "The protocol requires gloves. The conservator wore them in the trial; durability will be assessed in a later test.",
+    "diagnosis": "The wording “The trial established durability.” needs attention. The past-tense claim presents a planned test as a completed result. The conservator wore gloves in the completed trial, but durability is to be assessed later. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The protocol requires gloves”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The trial established durability.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "scope": {
+    "facts": "Observers detected no owls during two daytime visits. No night visit occurred.",
+    "draft": "No owls live here.",
+    "repair": "No owls were detected during the two daytime visits. The observations do not establish their absence at night.",
+    "diagnosis": "The wording “No owls live here.” needs attention. This general claim goes beyond two visits made in daylight. Report that no owls were detected during those visits and leave their presence at night unresolved. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “No owls were detected during the two daytime visits”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “No owls live here.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "collocations": {
+    "facts": "A room has a long echo. Both bare walls and its shape could contribute.",
+    "draft": "The echo proves that the walls are responsible.",
+    "repair": "The long echo is consistent with low sound absorption. The room’s shape may also contribute.",
+    "diagnosis": "The wording “The echo proves that the walls are responsible.” needs attention. “Proves” treats one possible explanation as established and excludes the room’s shape. Describe compatibility with an explanation while keeping the alternative visible. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The long echo is consistent with low sound absorption”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The echo proves that the walls are responsible.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "complements": {
+    "facts": "A new filter makes it possible for readers to search by publication year. Its use has not been measured.",
+    "draft": "The filter enabled higher use of the catalogue.",
+    "repair": "The filter enables readers to search by publication year. Its use has not yet been measured.",
+    "diagnosis": "The wording “The filter enabled higher use of the catalogue.” needs attention. This wording turns a search capability into an observed increase in use. Name what readers can do with the filter, then state that actual use was not measured. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The filter enables readers to search by publication year”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The filter enabled higher use of the catalogue.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "reporting": {
+    "facts": "A historian proposed that a market relocated because of flooding. The document reports no flood measurements.",
+    "draft": "The historian demonstrated that flooding caused the relocation.",
+    "repair": "The historian proposed flooding as an explanation for the relocation. The document supplies no measurements to test that explanation.",
+    "diagnosis": "The wording “The historian demonstrated that flooding caused the relocation.” needs attention. “Demonstrated” presents a proposed explanation as an established finding. Use “proposed” and retain the absence of measurements that could test the explanation. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The historian proposed flooding as an explanation for the relocation”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The historian demonstrated that flooding caused the relocation.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "precise-words": {
+    "facts": "A gauge measures thickness in millimetres. Three readings are recorded for each tile.",
+    "draft": "The gauge measures three thicknesses per tile.",
+    "repair": "The gauge measures thickness in millimetres. Three measurements are recorded for each tile.",
+    "diagnosis": "The wording “The gauge measures three thicknesses per tile.” needs attention. This could suggest three different properties or locations, although the facts specify three readings of thickness. Distinguish the property measured, thickness, from the three recorded measurements. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The gauge measures thickness in millimetres”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The gauge measures three thicknesses per tile.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "premises": {
+    "facts": "Only six beds can be inspected today. Signs of dryness are a provisional priority criterion.",
+    "draft": "Therefore, inspecting dry beds first prevents damage.",
+    "repair": "Only six beds can be inspected today. If other beds must wait, signs of dryness offer a provisional reason for checking some beds first; that cue does not establish that inspection prevents damage.",
+    "diagnosis": "The wording “Therefore, inspecting dry beds first prevents damage.” needs attention. “Therefore” skips the reason for prioritising those beds and asserts an outcome that was not measured. Explain why inspection order matters and label dryness as a provisional cue rather than a guarantee. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Only six beds can be inspected today”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Therefore, inspecting dry beds first prevents damage.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "concession": {
+    "facts": "The library has many books, but its collection can be borrowed only before 4 p.m.",
+    "draft": "Although the collection is large, the library owns books.",
+    "repair": "Although the library has a large collection, books can be borrowed only before 4 p.m. The restricted hours limit evening access to the collection.",
+    "diagnosis": "The wording “Although the collection is large, the library owns books.” needs attention. Owning books does not provide a meaningful contrast to having a large collection. Contrast the size of the collection with the restricted hours that limit access to it. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Although the library has a large collection, books can be borrowed only before 4 p.m”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Although the collection is large, the library owns books.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "conditions": {
+    "facts": "A valid ticket is necessary for entry. The room must also have space.",
+    "draft": "A ticket guarantees entry.",
+    "repair": "Visitors may enter only if they have a valid ticket and space remains in the room. A ticket alone does not guarantee entry.",
+    "diagnosis": "The wording “A ticket guarantees entry.” needs attention. The sentence drops the additional requirement that space must remain in the room. A valid ticket is required, but it is not enough on its own. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Visitors may enter only if they have a valid ticket and space remains in the room”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “A ticket guarantees entry.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "causality": {
+    "facts": "Attendance rose after ticket prices fell, during the same month that a popular performer joined.",
+    "draft": "Lower prices caused the increase in attendance.",
+    "repair": "Attendance rose after the price reduction. The change could reflect lower prices or the new performer; these observations do not distinguish the explanations.",
+    "diagnosis": "The wording “Lower prices caused the increase in attendance.” needs attention. The wording isolates a cause even though a popular performer arrived at the same time. Report the observed sequence and leave the competing explanations unresolved. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Attendance rose after the price reduction”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Lower prices caused the increase in attendance.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "compare-sources": {
+    "facts": "Teaching source A measured time spent reading labels. Source B tested recall after a visit.",
+    "draft": "Source B disproves Source A.",
+    "repair": "The sources examine different aspects of exhibit engagement: A measures reading time, whereas B assesses later recall. Neither outcome alone describes the complete visitor experience.",
+    "diagnosis": "The wording “Source B disproves Source A.” needs attention. The sentence assumes a contradiction even though the sources measured different outcomes. Compare reading time and recall as different aspects of engagement, rather than opposing measurements of one outcome. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The sources examine different aspects of exhibit engagement: A measures reading time, whereas B assesses later recall”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Source B disproves Source A.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "gap": {
+    "facts": "A search inspected 12 local catalogues for dates of a market relocation. Two list the new location; none gives a date.",
+    "draft": "No historical record gives the relocation date.",
+    "repair": "Two of the 12 inspected catalogues identify the new market location. None of the 12 supplies the relocation date, which remains unresolved within this search.",
+    "diagnosis": "The wording “No historical record gives the relocation date.” needs attention. “No historical record” extends the search result to material that was not inspected. Limit the unresolved date to the 12 catalogues actually examined. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Two of the 12 inspected catalogues identify the new market location”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “No historical record gives the relocation date.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "attribution": {
+    "facts": "Teaching source A reports sold tickets. You infer potential demand, but attendance was not recorded.",
+    "draft": "Source A shows that everyone who bought a ticket attended.",
+    "repair": "Source A reports ticket sales. These sales indicate purchases, although attendance and unmet demand cannot be inferred directly from them.",
+    "diagnosis": "The wording “Source A shows that everyone who bought a ticket attended.” needs attention. This attributes an attendance claim to a source that reports sales only. Keep the reported ticket sales separate from any interpretation of attendance or demand. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Source A reports ticket sales”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Source A shows that everyone who bought a ticket attended.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "conflicting": {
+    "facts": "One teaching study measured beginners after a week; another measured experts after a year. Their reported gains differ.",
+    "draft": "The different gains prove that one teaching method is better.",
+    "repair": "The studies report different gains, but they also differ in experience and follow-up time. Comparable groups and follow-up periods would be needed to isolate a teaching-method difference.",
+    "diagnosis": "The wording “The different gains prove that one teaching method is better.” needs attention. The statement ignores differences in participant experience and follow-up time. Name those known differences without treating them as proven causes of the differing gains. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The studies report different gains, but they also differ in experience and follow-up time”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The different gains prove that one teaching method is better.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "problem": {
+    "facts": "Passengers choose connecting buses. The timetable omits walking time between stops.",
+    "draft": "Bus connections are important.",
+    "repair": "Passengers need to judge whether a connection is feasible, but the timetable omits walking time between stops. This omission leaves the feasibility of short connections unclear.",
+    "diagnosis": "The wording “Bus connections are important.” needs attention. The statement supplies no specific obstacle that explains the research problem. Identify the missing walking time and why passengers need it to judge short connections. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Passengers need to judge whether a connection is feasible, but the timetable omits walking time between stops”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Bus connections are important.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "definitions": {
+    "facts": "The study counts each admission to the museum as one visit, including repeat admissions by the same person.",
+    "draft": "Visits and visitors are the same measure.",
+    "repair": "Here, a visit denotes one admission to the museum. A visitor who enters twice contributes two visits.",
+    "diagnosis": "The wording “Visits and visitors are the same measure.” needs attention. This merges admissions with distinct people and loses the repeat-counting rule. Define one visit as one admission, so the same person can contribute more than one visit. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Here, a visit denotes one admission to the museum”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Visits and visitors are the same measure.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "comparison": {
+    "facts": "Layout A shows 40 objects with brief labels; layout B shows 20 with detailed labels. Learning was not tested.",
+    "draft": "Layout B is better.",
+    "repair": "Layout A displays more objects, whereas layout B provides more detail per object. The comparison describes a coverage-detail trade-off; it does not establish which layout improves learning.",
+    "diagnosis": "The wording “Layout B is better.” needs attention. “Better” leaves the comparison dimension unspecified and implies a conclusion about an untested benefit. Compare object coverage with label detail and keep improved learning unestablished. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Layout A displays more objects, whereas layout B provides more detail per object”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Layout B is better.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "transitions": {
+    "facts": "One paragraph establishes demand for evening buses. The next compares staffing schedules.",
+    "draft": "Next, staffing.",
+    "repair": "Demand for evening buses leaves the question of how to staff the service. We next compare the staffing hours required by two schedules.",
+    "diagnosis": "The wording “Next, staffing.” needs attention. This announces a topic but leaves the connection to evening-bus demand unexplained. State that meeting the demand raises a staffing question, then introduce the schedule comparison. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Demand for evening buses leaves the question of how to staff the service”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Next, staffing.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "method-rationale": {
+    "facts": "Researchers chose a portable meter to record sound in several rooms. It has lower frequency resolution than the laboratory instrument.",
+    "draft": "The portable meter was chosen because it is excellent.",
+    "repair": "A portable meter was chosen to record sound in several rooms. This mobility came at the cost of lower frequency resolution than the laboratory instrument.",
+    "diagnosis": "The wording “The portable meter was chosen because it is excellent.” needs attention. “Excellent” gives no reason tied to the measurement task and hides the loss of frequency detail. Explain that portability serves measurements across rooms while acknowledging lower frequency resolution. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “A portable meter was chosen to record sound in several rooms”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The portable meter was chosen because it is excellent.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "results": {
+    "facts": "Thirty-six of 60 survey respondents preferred a morning tour. Actual bookings were not measured.",
+    "draft": "Most visitors booked a morning tour.",
+    "repair": "Thirty-six of the 60 respondents preferred a morning tour. The survey did not measure actual bookings.",
+    "diagnosis": "The wording “Most visitors booked a morning tour.” needs attention. This changes surveyed preferences into purchases and respondents into the entire visitor population. Report the 36 of 60 respondents who preferred mornings and retain the absence of booking data. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Thirty-six of the 60 respondents preferred a morning tour”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Most visitors booked a morning tour.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "interpretation": {
+    "facts": "Visitors stayed longer after new chairs arrived. Opening hours were extended at the same time.",
+    "draft": "The chairs made visitors stay longer.",
+    "repair": "Longer stays may reflect the new chairs or the extended opening hours. The observations do not distinguish these explanations.",
+    "diagnosis": "The wording “The chairs made visitors stay longer.” needs attention. The statement attributes the change to the chairs despite the simultaneous extension of opening hours. Keep the observed longer stays firm but express uncertainty about their explanation. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Longer stays may reflect the new chairs or the extended opening hours”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The chairs made visitors stay longer.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "limitations": {
+    "facts": "A search tool was tested on typed documents only. Handwritten records were excluded.",
+    "draft": "More research is needed.",
+    "repair": "The evaluation used typed documents, so performance on handwriting remains untested. A separate handwritten-record evaluation would assess that boundary.",
+    "diagnosis": "The wording “More research is needed.” needs attention. The sentence does not identify what remains unknown or which next test would address it. Connect the typed-document evaluation to the untested handwritten records and name a relevant evaluation. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The evaluation used typed documents, so performance on handwriting remains untested”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “More research is needed.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "quantities": {
+    "facts": "Preference for an audio tour rose from 20% to 30% in two separate surveys.",
+    "draft": "Preference rose by 10 percent.",
+    "repair": "Reported preference rose from 20% to 30% in two separate surveys. This is an increase of 10 percentage points, or 50% relative to the earlier percentage.",
+    "diagnosis": "The wording “Preference rose by 10 percent.” needs attention. The wording confuses an absolute difference between percentages with a change relative to the starting value. The rise from 20% to 30% is 10 percentage points, or 50% relative to the earlier percentage. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Reported preference rose from 20% to 30% in two separate surveys”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Preference rose by 10 percent.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "information-flow": {
+    "facts": "A paragraph explains why watering needs a schedule: volunteers come on different days and dry beds should not be overlooked.",
+    "draft": "Volunteers arrive on different days; therefore the garden is attractive.",
+    "repair": "Volunteers visit on different days, so they need a shared watering schedule. The schedule should record which beds were watered, reducing the risk that another volunteer overlooks a dry bed.",
+    "diagnosis": "The wording “Volunteers arrive on different days; therefore the garden is attractive.” needs attention. The conclusion does not follow from the stated scheduling fact. Develop the need for a shared watering record and explain how it can help volunteers coordinate. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Volunteers visit on different days, so they need a shared watering schedule”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Volunteers arrive on different days; therefore the garden is attractive.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "concision": {
+    "facts": "A curator photographed each damaged tile before cleaning to record its initial condition.",
+    "draft": "The curator photographed tiles.",
+    "repair": "Before cleaning, the curator photographed each damaged tile. These photographs recorded the tiles’ initial condition.",
+    "diagnosis": "The wording “The curator photographed tiles.” needs attention. The shortened wording deletes which tiles, when the photographs were taken, and why those details matter. Keep the damaged subset, the timing before cleaning, and the purpose of recording initial condition. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Before cleaning, the curator photographed each damaged tile”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The curator photographed tiles.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "abstract": {
+    "facts": "A study compares two storage boxes. In a week-long humidity test B retained less moisture than A. Long-term damage was not assessed.",
+    "draft": "Box B prevents long-term damage.",
+    "repair": "We compared two storage boxes in a week-long humidity test. Box B retained less moisture than A, but the test did not assess long-term damage.",
+    "diagnosis": "The wording “Box B prevents long-term damage.” needs attention. This turns a week-long humidity result into an untested claim about long-term protection. Report lower retained moisture in the test and preserve the limit concerning long-term damage. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “We compared two storage boxes in a week-long humidity test”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “Box B prevents long-term damage.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "reviewer-response": {
+    "facts": "A reviewer asks why a preference survey proves increased attendance. Attendance was not measured.",
+    "draft": "We have now measured attendance and confirmed our claim.",
+    "repair": "We agree that stated preferences do not establish attendance. We will revise the claim to describe respondents’ preferences and identify attendance measurement as future work.",
+    "diagnosis": "The wording “We have now measured attendance and confirmed our claim.” needs attention. This reply invents an additional study to resolve a valid reviewer concern. Acknowledge the limit, revise the claim to stated preferences, and describe attendance measurement as future work. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “We agree that stated preferences do not establish attendance”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “We have now measured attendance and confirmed our claim.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "recommendations": {
+    "facts": "More respondents request evening access, but costs and actual attendance are unknown.",
+    "draft": "The museum should permanently extend its hours because revenue will increase.",
+    "repair": "The requests for evening access support considering a pilot. Recording attendance and staffing costs during the pilot would inform a decision about a permanent extension.",
+    "diagnosis": "The wording “The museum should permanently extend its hours because revenue will increase.” needs attention. The recommendation assumes attendance and financial benefits that have not been measured. Propose a bounded pilot to investigate attendance and staffing costs before a permanent decision. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The requests for evening access support considering a pilot”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The museum should permanently extend its hours because revenue will increase.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "counterargument": {
+    "facts": "A critic notes that moisture sensors do not reveal every plant disease. The system is intended only to flag dry soil for inspection.",
+    "draft": "The critic is wrong because moisture sensors detect every disease.",
+    "repair": "The sensors do not diagnose every disease. Their narrower role is to flag dry soil for inspection, for which moisture readings provide a relevant cue.",
+    "diagnosis": "The wording “The critic is wrong because moisture sensors detect every disease.” needs attention. The reply dismisses a valid limitation by claiming a capability the system does not have. Accept the disease-detection limit and explain the narrower role of flagging dry soil for inspection. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “The sensors do not diagnose every disease”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The critic is wrong because moisture sensors detect every disease.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  },
+  "integrated": {
+    "facts": "A library lacks evidence about evening access. It surveyed 40 visitors; 22 requested later hours. Staffing cost and actual attendance remain unknown.",
+    "draft": "The survey proves that later opening is affordable.",
+    "repair": "Twenty-two of 40 surveyed visitors requested later opening. This preference supports considering a pilot, but it does not establish attendance or affordability. A pilot that records visits and staffing costs would address those remaining questions.",
+    "diagnosis": "The wording “The survey proves that later opening is affordable.” needs attention. The conclusion jumps from 22 stated preferences to an unmeasured cost judgement. Use the survey to motivate considering a pilot, while retaining uncertainty about attendance and staffing costs. The main concern is what the reader is asked to understand or accept, rather than a need for more elaborate vocabulary.",
+    "review": "Keep the proposed wording: “Twenty-two of 40 surveyed visitors requested later opening”. It remains within the supplied facts and retains the relevant distinction or limit. A stronger conclusion would require additional support; stylistic variation alone is not a reason to reject it.",
+    "note": "I retained the details needed to make the point precise. I avoided the misleading claim “The survey proves that later opening is affordable.”.",
+    "moves": [
+      "Use the supplied facts to decide what the words can mean.",
+      "State your reason explicitly and retain what remains unknown.",
+      "Use the answer format requested in your own task; this example uses different content."
+    ]
+  }
+}
