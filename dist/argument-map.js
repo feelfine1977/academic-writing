@@ -1,8 +1,8 @@
 const STAGES=[
- ['I','Motivate','Why does this problem need solving?','Diagnostics need to support a justified business review decision.','The problem sets the questions for the literature.'],
+ ['I','Motivate','Why does this problem need solving?','Explain the practical problem and why it matters.','The problem sets the questions for the literature.'],
  ['II','Connect the literature','What is known, and what is still missing?','Bring evidence of the gap together with foundations for a solution.','The gap motivates the capabilities required.'],
  ['III','Specify the response','What must a solution make possible?','State the necessary capabilities before choosing mechanisms.','These requirements constrain the method.'],
- ['IV','Explain WISE','How does the method meet those needs?','Connect expected execution, assessment and a qualified review output.','The method defines what the evaluation must examine.'],
+ ['IV','Explain the method','How does the method meet those needs?','Connect each method choice to the question it addresses.','The method defines what the evaluation must examine.'],
  ['V','Test the claims','What does the evidence actually support?','Compare the intended contribution with the evaluation and its scope.','The evidence sets limits on the conclusions.'],
  ['VI','Interpret & bound','What follows—and what remains open?','Explain the contribution, limitations and work still needed.','Return to the research problem within the demonstrated scope.'],
 ];

@@ -60,6 +60,9 @@ class Teaching:
         row = self.lab.store.one('SELECT * FROM exercises WHERE id=?',(exercise_key,))
         if not row: raise ValueError('Exercise not found.')
         e = self.lab.exercise(row)
+        from .writing_courses import teaching_support
+        course_help=teaching_support(e)
+        if course_help:return course_help
         e['hints']=json.loads(row['payload']).get('hints',[])
         template = self.support['exercise_examples'].get(exercise_key)
         if not template:

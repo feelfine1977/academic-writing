@@ -5,4 +5,4 @@ if not exist ".venv\Scripts\pythonw.exe" (
   pause
   exit /b 1
 )
-start "Academic Writing Lab" ".venv\Scripts\pythonw.exe" "%~dp0desktop.py"
+start "Academic Writing Lab" ".venv\Scripts\pythonw.exe" -X utf8 "%~dp0desktop.py"

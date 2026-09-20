@@ -120,6 +120,15 @@ class Curriculum:
             m['skills']=sorted({s for k in keys for s in exercises[k]['skill_ids']})
             c['modules'].append(m)
         ordered=list(exercises)
+        from .writing_courses import curriculum_specs
+        for spec in curriculum_specs():
+            c=course(spec['id'],spec['title'],spec['goal'],spec['kind'])
+            c.update({k:v for k,v in spec.items() if k not in ('modules','id','title','goal','kind')})
+            for ms in spec['modules']:
+                keys=sorted(k for k in ordered if exercises[k].get('module_id')==ms['id'])
+                if keys:
+                    module(c,ms['id'],ms['title'],keys,ms['goal'])
+                    c['modules'][-1].update({k:v for k,v in ms.items() if k not in ('id','title','goal')})
         for spec in self.lab.teaching.advanced['courses']:
             c=course(spec['id'],spec['title'],spec['goal'],'advanced')
             for ms in spec['modules']:

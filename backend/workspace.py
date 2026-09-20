@@ -21,6 +21,14 @@ import yaml
 from scripts.create_paper_workspace import (ALL_FIELDS, CARD_FIELDS, STRUCTURE_FIELDS,
     create_paper, link_label, portable_name, read_outline, unique_name)
 
+# These optional side notes use the same revision and conflict protection as prose.
+# Keep them out of the empty-paper template so a new paper stays uncluttered.
+SUPPORT_FIELDS = ('Supervisor comments and editing consequences',
+                  'Academic reviewer guidance', 'Flow and wording notes', 'Opening options',
+                  'Writing outline', 'Section writing plan', 'Section writing stage',
+                  'Section manuscript source', 'Writing scaffold', 'Outline provenance', 'Outline figures',
+                  'Writing intention', 'Next writing action', 'Active writing idea', 'Writing goal origin', 'Writing goal stage')
+
 
 def frontmatter(values):
     return '---\n'+yaml.safe_dump(values,sort_keys=False,allow_unicode=True).rstrip()+'\n---\n\n'
@@ -181,10 +189,14 @@ class Workspace:
                  'hash':sha(raw), 'path':str(path), 'filename':path.name, 'uri':self.uri(path), 'meta':meta,
                  '_raw':raw, '_body':body}
         if value['type'] == 'paragraph': value['type'] = 'argument'
+        prose = value['fields'].get('Manuscript prose', '').strip()
+        value['writing_status'] = ('complete' if prose and value['fields'].get('Completed prose hash') == sha(prose)
+                                   else 'draft' if prose else 'empty')
+        value['vault_path'] = path.relative_to(self.lab.vault).as_posix()
         if value['type'] in ('section','subsection','argument'):
             value['title'] = re.sub(r'^(Section|Subsection|Paragraph|Argument)\s*·\s*','',value['title'])
         if not isinstance(value['id'], str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,100}',value['id']):
-            raise ValueError('The note needs a valid stable awl_id property.')
+            raise ValueError('Set awl_id to a unique stable key, such as coastal-study or coastal-study-introduction (letters, numbers, hyphens or underscores). Replace any <paper-key> template placeholder first.')
         return value
 
     @staticmethod
@@ -204,12 +216,24 @@ class Workspace:
             except (ValueError,OSError,KeyError) as error:issues.append(str(error))
         for path in sorted(set(paths)):
             if path.parent.name.startswith('.'):continue
-            if not path.read_text(encoding='utf-8',errors='replace').startswith('---\n'):continue
             try:
+                raw = self.safe(path).read_text(encoding='utf-8')
+                if not raw.startswith('---\n'):
+                    if path.name.casefold() in {'root.md','paper outline.md'}:
+                        issues.append(str(path)+': Add the paper template properties at the top: awl_kind: paper and a unique awl_id. See the manual paper folder guide.')
+                    continue
+                header = re.match(r'\A---\n(.*?)\n---\n', raw, re.S)
+                if not header: raise ValueError('The note properties are not closed with --- on their own line.')
+                try: meta = yaml.load(header.group(1), Loader=NoteLoader)
+                except yaml.YAMLError as error: raise ValueError('The note properties could not be read. Check them in Obsidian.') from error
+                if not isinstance(meta, dict): continue
+                if meta.get('awl_kind') != 'paper':
+                    if path.name.casefold() == 'root.md' and meta.get('awl_kind') != 'template':
+                        issues.append(str(path)+': Set awl_kind: paper in the root note properties so the folder can appear in Papers.')
+                    continue
                 note = self.read(path)
-                if note['meta'].get('awl_kind') != 'paper': continue
                 if note['id'] in identities:
-                    issues.append('Duplicate paper identity: '+str(path)+'. Keep both folders and adopt one as a new paper before editing.')
+                    issues.append('Duplicate paper identity: '+str(path)+'. Keep both folders. For a new paper, use a fresh blank template with another paper key; its cards need the matching paper_id and their own unique awl_id keys.')
                     papers = [p for p in papers if p['id'] != note['id']]; identities[note['id']] = False
                     continue
                 identities[note['id']] = True
@@ -413,18 +437,43 @@ class Workspace:
                     'parent':next((brief(n) for n in nodes if n['id']==note['parent_id']),None),
                     'children':[brief(n) for n in nodes if n['parent_id']==card_id]}
 
-    def save(self, paper_id, document_id, base_hash, changes, merge_heads=None):
+    def save(self, paper_id, document_id, base_hash, changes, merge_heads=None, title=None):
         with self.lock:
+            if title is not None and (document_id == paper_id or not isinstance(title, str)
+                                      or not title.strip() or len(title) > 300
+                                      or '\n' in title or '\r' in title):
+                raise ValueError('Use a single-line card title of up to 300 characters.')
             if merge_heads is not None and (not isinstance(merge_heads,list) or any(not isinstance(h,str) for h in merge_heads)):
                 raise ValueError('Include the list of compared versions.')
             path = self.locate(paper_id); plan = self.read(path)
             note = plan if document_id==paper_id else next((n for n in self.tree(plan) if n['id']==document_id),None)
             if not note: raise ValueError('Card not found.')
-            allowed = set(ALL_FIELDS) if document_id!=paper_id else {'Research question','Intended contribution','Agreed plan and open questions','Next writing session','Argument order'}
+            allowed = set(ALL_FIELDS + SUPPORT_FIELDS) if document_id!=paper_id else {'Research question','Intended contribution','Agreed plan and open questions','Next writing session','Argument order','Outline revision','Revision resources'}
             if not isinstance(changes,dict) or set(changes)-allowed or any(not isinstance(v,str) or len(v)>60000 for v in changes.values()):
                 raise ValueError('Invalid note fields or field too long.')
+            if 'Section manuscript source' in changes:
+                if note['type'] not in ('section','subsection') or changes['Section manuscript source'] not in ('arguments','section'):
+                    raise ValueError('Choose arguments or section as the manuscript source of a section card.')
+            if 'Section writing stage' in changes and changes['Section writing stage'] not in ('connect','rewrite','polish'):
+                raise ValueError('Choose connect, rewrite or polish as the section writing stage.')
+            if 'Writing goal origin' in changes and changes['Writing goal origin'] not in ('','own','outline'):
+                raise ValueError('Choose own or outline as the writing goal origin.')
+            if 'Writing goal stage' in changes and changes['Writing goal stage'] not in ('','connect','rewrite','polish'):
+                raise ValueError('Choose a valid writing goal stage.')
+            if 'Active writing idea' in changes and changes['Active writing idea']:
+                from .section_writing import parse_steps
+                steps=parse_steps(changes.get('Section writing plan',note['fields'].get('Section writing plan','')))
+                if note['type'] not in ('section','subsection') or changes['Active writing idea'] not in {s['id'] for s in steps}:
+                    raise ValueError('Choose an existing idea from this section writing plan.')
+            if 'Section writing plan' in changes:
+                from .section_writing import parse_steps
+                parse_steps(changes['Section writing plan'])
             note = self.observe(path.parent, note)
             proposed_body = update_fields(note['_body'],changes)
+            if title is not None:
+                proposed_body, replaced = re.subn(r'^# [^\n]*', lambda _: '# '+title.strip(),
+                                                   proposed_body, count=1, flags=re.M)
+                if not replaced: raise ValueError('The card has no title heading to update.')
             parsed_fields = fields_of(proposed_body)
             if any(parsed_fields.get(k) != v.strip() for k,v in changes.items()):
                 raise ValueError('Use ### for headings inside a field. A ## heading starts a separate note field; your editor text has been kept.')
@@ -493,9 +542,22 @@ class Workspace:
     def export(self, paper_id):
         path = self.locate(paper_id); plan = self.read(path)
         lines = ['# '+plan['title'],'']
-        for card in self.tree(plan):
+        nodes = self.tree(plan); by_id = {n['id']:n for n in nodes}
+        for card in nodes:
+            if card['type'] in ('section','subsection') and card['fields'].get('Section manuscript source','') not in ('','arguments','section'):
+                raise ValueError('Choose arguments or section as the manuscript source for '+card['title']+' before export.')
+        def section_owned(card):
+            parent=card['parent_id']
+            while parent:
+                if by_id[parent]['fields'].get('Section manuscript source')=='section':return True
+                parent=by_id[parent]['parent_id']
+            return False
+        for card in nodes:
+            if section_owned(card):continue
             if card['type'] in ('section','subsection'):
                 lines += [('#'*(card['depth']+2))+' '+card['title'],'']
+                if card['fields'].get('Section manuscript source')=='section':
+                    lines += [card['fields'].get('Manuscript prose',''),'']
             elif card['fields'].get('Manuscript prose'):
                 lines += [card['fields']['Manuscript prose'],'']
         return '\n'.join(lines)

@@ -2,7 +2,22 @@
 
 Publish from the prepared public source folder. It contains the app and general exercises. Keep your Obsidian vault, private development repository and their histories separate.
 
-## Option 1: GitHub Desktop
+## Guided update of an existing public clone
+
+Use this route if your prepared public app folder already contains its own `.git` directory and is connected to your GitHub repository.
+
+1. Open GitHub Desktop. Choose **File → Add Local Repository**, then select the existing public clone. Do not select your private development folder.
+2. Check **Current branch** and the repository's remote in **Repository Settings**. Use your intended repository and branch.
+3. Review **Changes**. Expect app code, general lessons, tests, blank templates and documentation. Private drafts, recordings, transcripts, local databases and Obsidian folders do not belong here.
+4. Check your commit name and email in Desktop's Git settings. Enter a Summary describing the update and click **Commit to main** (or the branch shown).
+5. Click **Push origin**. Check the latest commit and README on GitHub. A commit is local; pushing publishes it.
+6. Open **Actions → Portable application checks** and inspect the run for this commit. Wait for both Windows and macOS jobs to pass. [Reading workflow results](https://docs.github.com/en/actions/how-tos/monitor-workflows/view-workflow-run-history).
+
+**Next:** follow the [Windows setup checklist](windows-setup.md), connect the already-synced Obsidian vault and select a local Ollama model. Application updates come through Git; your manuscript and saved practice come through Obsidian.
+
+If Desktop asks you to pull or resolve a conflict, inspect the incoming changes first. Do not force-push or discard changes to bypass the message. [Add an existing local repository](https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop).
+
+## First publication into a newly cloned repository
 
 This works on Mac and Windows and also preserves any files already in the GitHub repository.
 
@@ -15,7 +30,7 @@ This works on Mac and Windows and also preserves any files already in the GitHub
 
 GitHub supports publishing local code through either Desktop or the command line. [GitHub's publishing guide](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 
-## Option 2: Terminal — first push to an empty repository
+## Terminal — first push to an empty repository
 
 Open Terminal on Mac or PowerShell/Git Bash on Windows, then change into the prepared public source folder. Replace `YOUR-ACCOUNT` below with your account name. Use these initialisation steps only when that folder has no Git repository and the destination repository is empty.
 
@@ -86,4 +101,4 @@ The release builder creates a new folder; it does not overwrite an existing publ
 
 ## Install from GitHub on another computer
 
-Open the repository and choose **Code → Download ZIP**, or clone it with Git. Extract it into a permanent folder and follow the [installation guide](portable-user-guide.md). Run **Install on Windows.cmd** or **Install on Mac.command**, then choose your local synced Obsidian vault in **My papers**. Your paper data travels through Obsidian Sync separately from GitHub.
+Clone the repository with GitHub Desktop or Git to support **Update on Windows.cmd** and **Update on Mac.command**. A ZIP download also installs, but later updates require a fresh download because it has no Git history. Use a permanent folder outside the vault and follow the [installation guide](portable-user-guide.md). Run **Install on Windows.cmd** or **Install on Mac.command**, then choose your local synced Obsidian vault in **Papers**. Your paper data travels through Obsidian Sync separately from GitHub. Follow the [two-computer guide](portable-sync.md) before changing devices.

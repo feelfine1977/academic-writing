@@ -5,6 +5,7 @@ import yaml
 from .storage import dump, digest, uid, now
 
 SKILLS = {'S01':'Reference & agreement','S02':'Academic collocations','S03':'Contrast & concession','S04':'Reasons & implications','S05':'Definitions & precision','S06':'Paragraph arguments','S07':'Methods & comparisons','S08':'Results & uncertainty','S09':'Literature synthesis','S10':'Paper coherence'}
+SKILLS.update(S11='Creative writing craft',S12='English grammar',S13='Writing for an English reader')
 FORMATS = {'gap','ordering','clause_completion','keywords_to_sentence','outline_to_sentences','paragraph_from_ideas','free_writing'}
 
 def validate_pack(pack, answers):

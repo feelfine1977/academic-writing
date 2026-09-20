@@ -1,0 +1,39 @@
+---
+awl_schema: 1
+awl_kind: card
+awl_id: "<paper-key>-introduction"
+paper_id: "<paper-key>"
+card_type: section
+---
+
+# Introduction
+
+[Back to paper](../root.md)
+
+## Purpose
+
+## Main message
+
+## Scope and boundaries
+
+## Notes and bullet points
+
+## Connection to the surrounding argument
+
+## Reasoning and decisions
+
+## Next step
+
+## Writing outline
+
+## Writing scaffold
+
+## Section writing stage
+
+connect
+
+## Section manuscript source
+
+arguments
+
+## Manuscript prose

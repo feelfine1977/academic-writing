@@ -50,7 +50,7 @@ def library_package(lab):
                          'outline':p.get('outline',''),'reason':p.get('reason',''),'created':a['created'],'origin':'Mac import'})
     reviews={id:{'reflection':r['reflection'],'created':r['reviewed_at']} for id,r in lab.store.setting('writing_completion_reviews',{}).items()}
     completions={k:{'status':s['status'],'attemptId':s.get('evidence_attempt_id') or ''} for k,s in curriculum['exercise_status'].items() if s['completed']}
-    return {'schema':'awl.ipad.library.v1','created':now(),'title':'Urszula’s Academic Writing Lab',
+    return {'schema':'awl.ipad.library.v1','created':now(),'title':'Writing Lab',
             'exercises':exercises,'courses':courses,'modules':modules,'knowledge':knowledge,'wise':wise,
             'completions':completions,'initialAttempts':attempts,'initialReviews':reviews,
             'note':'Offline practice and self-review. Scientific claims and open prose still require judgement.'}

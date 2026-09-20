@@ -55,7 +55,7 @@ def model_input(context,role):
     p=copy.deepcopy(context['snapshot']['input'])
     # Retain the full assessment contract, remove browsing/navigation metadata from model attention.
     keys=('id','key','title','format','prompt','criteria','parts','choices','learning_objective','teaching_note',
-          'task_type','paper_node_id','paper_draft','rhetorical_move','skill_ids')
+          'task_type','paper_node_id','paper_draft','rhetorical_move','skill_ids','course_domain')
     p['exercise']={k:v for k,v in p['exercise'].items() if k in keys}
     p['writing_guidance']=[{k:v for k,v in g.items() if k not in ('content_hash','reading','wise_application','practice_key')} for g in context['guidance']['guidance']]
     p['mechanical_checks']={k:v for k,v in context['contract'].items() if k not in ('snapshot_hash','assessment_text','supplied_stem')}

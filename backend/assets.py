@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 
-NAMES={'wise/blueprint.json':'Paper blueprint.md','wise/cards.json':'Research card catalogue.md','wise/vocabulary.json':'Paper vocabulary.md',
+NAMES={'wise/writing_checks.json':'Paper writing checks.md','wise/blueprint.json':'Paper blueprint.md','wise/cards.json':'Research card catalogue.md','wise/vocabulary.json':'Paper vocabulary.md',
        'teaching_support.json':'Teaching examples.md','tutor_materials.json':'Tutor reference notes.md',
        'advanced/learning.json':'Advanced course catalogue.md','plain_examples.json':'Plain English examples.md'}
 

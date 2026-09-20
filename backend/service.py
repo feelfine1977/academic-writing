@@ -62,6 +62,8 @@ class Lab:
         for pack_file in sorted(bundled):
             answer_file=pack_file.with_name(pack_file.name.replace('.exercises.json','.answers.json'))
             import_pack(self.store,json.loads(pack_file.read_text()),json.loads(answer_file.read_text()))
+        from .writing_courses import packs
+        for pack,answers in packs():import_pack(self.store,pack,answers)
         if not self.store.setting('initial_sources_seeded',False):
             config=self.root/'content/seed_sources.json'
             paths=json.loads(config.read_text()) if config.is_file() else []

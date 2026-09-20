@@ -18,7 +18,8 @@ CARD_FIELDS = ("Purpose", "Notes and bullet points", "Source mapping",
                "Manuscript prose", "Reasoning and decisions", "Next step")
 STRUCTURE_FIELDS = ("Purpose", "Main message", "Scope and boundaries", "Notes and bullet points",
                     "Connection to the surrounding argument", "Reasoning and decisions", "Next step")
-ALL_FIELDS = tuple(dict.fromkeys(CARD_FIELDS + STRUCTURE_FIELDS))
+ALL_FIELDS = tuple(dict.fromkeys(CARD_FIELDS + STRUCTURE_FIELDS + (
+    'Completed prose hash', 'Selected review attempt', 'Completion note')))
 
 
 def portable_name(title: str) -> str:

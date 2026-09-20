@@ -14,6 +14,14 @@ ROOT=Path(__file__).resolve().parent
 def ps_literal(value):return "'"+str(value).replace("'","''")+"'"
 
 
+def windows_shortcut(pythonw, root, *, destination=None):
+    """Create the per-user shortcut; an explicit destination supports isolated tests."""
+    desktop = "[Environment]::GetFolderPath('Desktop')" if destination is None else ps_literal(destination)
+    script="$desktop="+desktop+"; $shell=New-Object -ComObject WScript.Shell; $link=$shell.CreateShortcut((Join-Path $desktop 'Writing Lab.lnk')); "
+    script+='$link.TargetPath='+ps_literal(pythonw)+'; $link.Arguments='+ps_literal(subprocess.list2cmdline(['-X','utf8',str(Path(root)/'desktop.py')]))+'; $link.WorkingDirectory='+ps_literal(root)+'; $link.Description='+ps_literal('Open your local writing and learning workspace')+'; $link.Save()'
+    subprocess.run(['powershell.exe','-NoProfile','-NonInteractive','-Command',script],check=True)
+
+
 def install():
     if sys.version_info<(3,12):raise RuntimeError('Install Python 3.12 or newer from python.org, then run setup again.')
     if os.name!='nt' and sys.platform!='darwin':raise RuntimeError('This shortcut installer supports Windows and macOS. On Linux, use the local-start instructions.')
@@ -24,14 +32,12 @@ def install():
     local=user_directory();local.mkdir(parents=True,exist_ok=True)
     if os.name=='nt':
         pythonw=environment/'Scripts/pythonw.exe'
-        script="$desktop=[Environment]::GetFolderPath('Desktop'); $shell=New-Object -ComObject WScript.Shell; $link=$shell.CreateShortcut((Join-Path $desktop 'Academic Writing Lab.lnk')); "
-        script+='$link.TargetPath='+ps_literal(pythonw)+'; $link.Arguments='+ps_literal(subprocess.list2cmdline([str(ROOT/'desktop.py')]))+'; $link.WorkingDirectory='+ps_literal(ROOT)+'; $link.Description='+ps_literal('Open your local writing and learning workspace')+'; $link.Save()'
-        subprocess.run(['powershell.exe','-NoProfile','-NonInteractive','-Command',script],check=True)
-        shortcut='Desktop → Academic Writing Lab'
+        windows_shortcut(pythonw,ROOT)
+        shortcut='Desktop → Writing Lab'
     else:
-        app=Path.home()/'Applications'/'Academic Writing Lab Portable.app';contents=app/'Contents';binary=contents/'MacOS';binary.mkdir(parents=True,exist_ok=True)
+        app=Path.home()/'Applications'/'Writing Lab Portable.app';contents=app/'Contents';binary=contents/'MacOS';binary.mkdir(parents=True,exist_ok=True)
         launcher=binary/'WritingLab';launcher.write_text('#!/bin/sh\nexec '+shlex.quote(str(python))+' '+shlex.quote(str(ROOT/'desktop.py'))+'\n',encoding='utf-8');launcher.chmod(0o755)
-        info={'CFBundleExecutable':'WritingLab','CFBundleIdentifier':'local.academicwritinglab.portable','CFBundleName':'Academic Writing Lab','CFBundlePackageType':'APPL','CFBundleVersion':'1','CFBundleShortVersionString':'0.16','LSUIElement':True}
+        info={'CFBundleExecutable':'WritingLab','CFBundleIdentifier':'local.academicwritinglab.portable','CFBundleName':'Writing Lab','CFBundlePackageType':'APPL','CFBundleVersion':'1','CFBundleShortVersionString':'0.16','LSUIElement':True}
         (contents/'Info.plist').write_bytes(plistlib.dumps(info));shortcut=str(app)
     (local/'installation.json').write_text(json.dumps({'application_folder':str(ROOT),'shortcut':shortcut},indent=2),encoding='utf-8')
     print('Installed. Open '+shortcut+'. Keep the application folder at '+str(ROOT)+'.')

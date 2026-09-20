@@ -12,7 +12,7 @@ import time
 import urllib.request
 import webbrowser
 
-APP='Academic Writing Lab'
+APP='Writing Lab'
 ROOT=Path(__file__).resolve().parent
 
 
@@ -87,11 +87,11 @@ def launch(data=None,port=8765,open_browser=True):
             if chosen is None:raise RuntimeError('No free local port was found. Existing services were left running.')
             python=ROOT/('.venv/Scripts/python.exe' if os.name=='nt' else '.venv/bin/python')
             if not python.exists():raise RuntimeError('Run Install on Windows.cmd or Install on Mac.command first.')
-            env=os.environ.copy();env.update(AWL_DATA_DIR=str(data),PYTHONUNBUFFERED='1')
+            env=os.environ.copy();env.update(AWL_DATA_DIR=str(data),PYTHONUNBUFFERED='1',PYTHONUTF8='1')
             flags={'creationflags':subprocess.CREATE_NO_WINDOW} if os.name=='nt' else {'start_new_session':True}
             log=data/'runtime'/'server.log'
             with log.open('a',encoding='utf-8') as stream:
-                child=subprocess.Popen([str(python),str(ROOT/'start.py'),'--port',str(chosen)],cwd=ROOT,env=env,stdin=subprocess.DEVNULL,stdout=stream,stderr=stream,**flags)
+                child=subprocess.Popen([str(python),'-X','utf8',str(ROOT/'start.py'),'--port',str(chosen)],cwd=ROOT,env=env,stdin=subprocess.DEVNULL,stdout=stream,stderr=stream,**flags)
             deadline=time.monotonic()+60
             while time.monotonic()<deadline:
                 if healthy(chosen,data):break
@@ -108,7 +108,7 @@ def show_error(message):
         import ctypes
         ctypes.windll.user32.MessageBoxW(None,message,APP,0x10)
     elif sys.platform=='darwin':
-        script='on run argv\n display dialog (item 1 of argv) with title "Academic Writing Lab" buttons {"OK"} default button "OK"\nend run'
+        script='on run argv\n display dialog (item 1 of argv) with title "Writing Lab" buttons {"OK"} default button "OK"\nend run'
         subprocess.run(['/usr/bin/osascript','-e',script,message],check=False)
     else:print(message,file=sys.stderr)
 

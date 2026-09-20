@@ -6,5 +6,5 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-py -3 install.py
+py -3 -X utf8 install.py
 pause

@@ -74,6 +74,17 @@ class ContextRepository:
         return {'snapshot_hash':snap['snapshot_hash'],**selected}
 
     def select_guidance(self, data):
+        from .writing_courses import curriculum_specs
+        exercise=data['exercise']
+        if exercise.get('course_domain') in ('creative','grammar','english'):
+            spec=next((m for c in curriculum_specs() for m in c['modules'] if m['id']==exercise.get('module_id')),None)
+            if spec:
+                record={'id':spec['id'],'title':spec['title'],'principle':spec['lesson'],
+                        'check':spec['goal'],'reading':spec['readings'][0],
+                        'kind':'Original course guidance; task criteria determine assessment.'}
+                return {'guidance':[{**record,'content_hash':fingerprint(record)}],
+                        'selection':'The lesson for this writing activity.',
+                        'evidence_boundary':'Illustrative fiction may be invented. Supplied task facts and the author’s chosen story rules still apply.'}
         e=data['exercise'];query=e.get('learning_objective','')+' '+e.get('title','')+' '+' '.join(e.get('criteria',[]))
         words=set(re.findall(r'[a-z]{4,}',query.lower()))
         skill_defaults={'S01':['reference','modifiers','scope'],'S02':['collocations','complements','precise-words'],

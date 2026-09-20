@@ -207,9 +207,9 @@ class RevisionWorkspace:
         return sorted(ranked,key=lambda x:(-x['score'],x['node_id']))[:4]
 
     def inspect(self,document_id,segment_id):
-        from .wise_support import scan,lesson
+        from .wise_support import CHECKS,paper_checks,scan,lesson
         doc,segment=self.segment(document_id,segment_id)
-        hits=scan(segment['text'])
+        hits=scan(segment['text'],paper_checks(self.lab).get('checks',CHECKS))
         links=[]
         for link in re.findall(r'!?\[\[([^\]]+)\]\]',segment['text']):
             target=link.split('|')[0].split('#')[0]

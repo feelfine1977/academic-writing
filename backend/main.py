@@ -90,6 +90,7 @@ class Profile(Body):
     local_confirmed:bool=True
     review_mode:Literal['careful','quick']='careful'
     verifier_model:str=Field(default='',max_length=250)
+    structure_model:str=Field(default='',max_length=250)
 
 class Build(Body):
     title:str=Field(min_length=1,max_length=180)
@@ -116,6 +117,7 @@ class WritingQuestion(Body):
     full_text:str|None=Field(default=None,max_length=12000)
     selection_start:int|None=Field(default=None,ge=0,le=24000)
     outline:str|None=Field(default=None,max_length=8000)
+    review_focus:Literal['general','evidence','structure']='general'
 
 class WordRequest(Body):
     node_id:str
@@ -203,9 +205,21 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
     except (OSError,ValueError):local_paths={}
     lab=Lab(store,ROOT,vault_root or os.getenv('AWL_VAULT') or local_paths.get('vault') or DEFAULT_VAULT)
     lab.seed()
+    from .fiction import Fiction, router as fiction_router
+    fiction=Fiction(lab)
     lab.workspace=Workspace(lab)
+    from .section_writing import SectionWriting
+    section_writing=SectionWriting(lab)
+    from .voice_notes import VoiceNotes, voice_router
+    voice_notes=VoiceNotes(lab)
     from .workspace_sources import PaperSources
     paper_sources=PaperSources(lab.workspace)
+    from .literature import Literature
+    literature=Literature(lab.workspace)
+    from .reading import Reading, router as reading_router
+    reading=Reading(lab,literature)
+    from .planner import Planner, router as planner_router
+    planner=Planner(lab.workspace)
     from .learning_sync import LearningSync
     learning_sync=LearningSync(lab.workspace)
     companion=Companion(lab)
@@ -213,6 +227,10 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
 
     @asynccontextmanager
     async def lifespan(app):
+        section_writing.recover()
+        voice_notes.recover()
+        fiction.recover()
+        reading.recover()
         store.execute("UPDATE jobs SET status='interrupted',error='The app restarted. Your attempt is saved; request feedback again.' WHERE status IN ('queued','running')")
         if auto_tutor and not store.setting('profile',{}).get('model'):
             inventory=await providers.model_inventory('ollama')
@@ -225,16 +243,37 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
                 await run_in_threadpool(learning_sync.sync)
                 await asyncio.sleep(15)
         sync_task=asyncio.create_task(share_learning())
+        async def receive_ipad_reading():
+            while True:
+                try: await reading.process_ipad_requests()
+                except (ValueError,OSError): pass  # A disconnected vault can be selected again.
+                await asyncio.sleep(15)
+        reading_sync_task=asyncio.create_task(receive_ipad_reading())
         try:yield
         finally:
+            reading_sync_task.cancel()
+            try: await reading_sync_task
+            except asyncio.CancelledError: pass
+            await voice_notes.close()
+            await fiction.close()
+            await reading.close()
             sync_task.cancel()
             try:await sync_task
             except asyncio.CancelledError:pass
             await lab.close()
             await run_in_threadpool(learning_sync.sync)
 
-    app=FastAPI(title='Academic Writing Lab',docs_url=None,redoc_url=None,lifespan=lifespan)
+    app=FastAPI(title='Writing Lab',docs_url=None,redoc_url=None,lifespan=lifespan)
     app.state.lab=lab;app.state.store=store
+    app.state.section_writing=section_writing
+    app.state.voice_notes=voice_notes
+    app.include_router(voice_router(voice_notes))
+    app.state.fiction=fiction
+    app.include_router(fiction_router(fiction,ROOT))
+    app.state.reading=reading
+    app.include_router(reading_router(reading))
+    app.state.planner=planner
+    app.include_router(planner_router(planner))
 
     @app.middleware('http')
     async def local_only(request,call_next):
@@ -249,12 +288,16 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
             return JSONResponse({'detail':'Reload the app to renew its local access token.'},status_code=403)
         if request.method in ('POST','PUT','PATCH'):
             limit=250_000_000 if request.url.path.startswith('/api/restore') else 25_000_000
+            if request.url.path.startswith('/api/workspace/papers/') and request.url.path.endswith('/voice-notes'):
+                limit=40_100_000
             if len(await request.body())>limit:return JSONResponse({'detail':f'Request too large ({limit//1_000_000} MB maximum).'},status_code=413)
         response=await call_next(request)
         response.headers['Cache-Control']='no-store'
         response.headers['X-Content-Type-Options']='nosniff'
         response.headers['Referrer-Policy']='no-referrer'
-        response.headers['Content-Security-Policy']="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+        response.headers['Content-Security-Policy']="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+        if '/section-writing/figures/' in request.url.path:
+            response.headers['Content-Security-Policy']="default-src 'none'; style-src 'unsafe-inline'; sandbox; frame-ancestors 'none'"
         return response
 
     @app.exception_handler(ValueError)
@@ -296,8 +339,84 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         if len(body['title'])>150 or len(body.get('outline',''))>200000:raise ValueError('The title or outline is too long.')
         return lab.workspace.create(body['title'],body.get('outline',''))
 
+    @app.get('/api/workspace/paper-template')
+    def workspace_paper_template(title:str,key:str):
+        from urllib.parse import quote
+        from .workspace_templates import paper_template
+        raw,filename=paper_template(title,key,[p['id'] for p in lab.workspace.catalogue()['papers']])
+        return Response(raw,media_type='application/zip',headers={'Content-Disposition':"attachment; filename*=UTF-8''"+quote(filename)})
+
+    @app.get('/api/workspace/manual-paper-guide')
+    def workspace_manual_paper_guide():
+        return FileResponse(ROOT/'templates'/'manual-paper'/'START_HERE.md',media_type='text/plain')
+
+    @app.get('/api/workspace/section-writing-guide')
+    def workspace_section_writing_guide():
+        return FileResponse(ROOT/'templates'/'section-writing'/'START_HERE.md',media_type='text/plain')
+
+    @app.get('/api/workspace/section-template')
+    def workspace_section_template():
+        output=io.BytesIO()
+        with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED) as archive:
+            for filename in ('Section.md','START_HERE.md','Tutor knowledge.md'):
+                archive.write(ROOT/'templates'/'section-writing'/filename,arcname=filename)
+        return Response(output.getvalue(),media_type='application/zip',headers={'Content-Disposition':'attachment; filename="Section writing template.zip"'})
+
     @app.get('/api/workspace/papers/{id}')
     def workspace_paper(id:str):return lab.workspace.get(id)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing')
+    def section_workspace(id:str,section_id:str):return section_writing.writing(id,section_id)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing/guidance')
+    def section_guidance(id:str,section_id:str,stage:str='connect',move_id:str|None=None):
+        if stage not in ('connect','rewrite','polish'):raise ValueError('Choose a writing stage.')
+        return section_writing.guidance(id,section_id,stage,move_id)
+
+    @app.post('/api/workspace/papers/{id}/sections/{section_id}/writing/review')
+    async def section_review(id:str,section_id:str,body:dict):return await section_writing.review(id,section_id,body)
+
+    @app.post('/api/workspace/papers/{id}/sections/{section_id}/writing/complete')
+    def section_complete(id:str,section_id:str,body:dict):return section_writing.complete(id,section_id,body)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing/practice')
+    def section_practice(id:str,section_id:str):
+        from .writing_rounds import intentional_practice
+        return intentional_practice(lab.workspace,id,section_id)
+
+    @app.post('/api/workspace/papers/{id}/sections/{section_id}/writing/practice')
+    def section_checkpoint(id:str,section_id:str,body:dict):
+        from .writing_rounds import checkpoint
+        return checkpoint(lab.workspace,id,section_id,body)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing/reviews')
+    def section_reviews(id:str,section_id:str):return section_writing.reviews(id,section_id)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing/reviews/{review_id}')
+    def section_review_status(id:str,section_id:str,review_id:str):return section_writing.review_status(id,section_id,review_id)
+
+    @app.get('/api/workspace/papers/{id}/sections/{section_id}/writing/polishing-prompt')
+    def section_polishing_prompt(id:str,section_id:str):return section_writing.polishing_prompt(id,section_id)
+
+    @app.get('/api/workspace/papers/{id}/section-writing/resources')
+    def section_resources(id:str,q:str='',tag:str='',kind:str='',version:str=''):return section_writing.resources(id,q,tag,kind,version)
+
+    @app.post('/api/workspace/papers/{id}/section-writing/resources/{resource_id}/tags')
+    def section_resource_tags(id:str,resource_id:str,body:dict):return section_writing.tag_resource(id,resource_id,body)
+
+    @app.get('/api/workspace/papers/{id}/section-writing/figures/{figure_id}')
+    def section_figure(id:str,figure_id:str):
+        return FileResponse(section_writing.figure(id,figure_id))
+
+    @app.get('/api/workspace/papers/{id}/outline-versions')
+    def workspace_outline_versions(id:str):
+        from .outline_import import history
+        return history(lab.workspace,id)
+
+    @app.get('/api/workspace/papers/{id}/outline-versions/{version_id}')
+    def workspace_outline_version(id:str,version_id:str):
+        from .outline_import import history
+        return history(lab.workspace,id,version_id)
 
     @app.post('/api/workspace/papers/{id}/cards')
     def workspace_card_create(id:str,body:dict):
@@ -316,12 +435,23 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
     def workspace_apply_attempt(id:str,card_id:str,body:dict):
         from .paper_practice import apply_attempt
         if not isinstance(body.get('attempt_id'),str):raise ValueError('Choose a saved writing attempt.')
-        return apply_attempt(lab,id,card_id,body['attempt_id'])
+        return apply_attempt(lab,id,card_id,body['attempt_id'],complete=body.get('complete') is True,expected_hash=body.get('base_hash'))
+
+    @app.post('/api/workspace/papers/{id}/cards/{card_id}/complete')
+    def workspace_complete(id:str,card_id:str,body:dict):
+        from .paper_practice import complete_card
+        if not isinstance(body.get('base_hash'),str):raise ValueError('Include the manuscript version you reviewed.')
+        return complete_card(lab,id,card_id,body['base_hash'])
+
+    @app.get('/api/workspace/papers/{id}/cards/{card_id}/review-drafts')
+    def workspace_review_drafts(id:str,card_id:str):
+        from .paper_practice import saved_reviews
+        return saved_reviews(lab,id,card_id)
 
     @app.patch('/api/workspace/papers/{id}/notes/{note_id}')
     def workspace_save(id:str,note_id:str,body:dict):
-        if set(body)-{'base_hash','fields','merge_heads'} or not isinstance(body.get('base_hash'),str):raise ValueError('Include the version you started editing.')
-        return lab.workspace.save(id,note_id,body['base_hash'],body.get('fields'),body.get('merge_heads'))
+        if set(body)-{'base_hash','fields','merge_heads','title'} or not isinstance(body.get('base_hash'),str):raise ValueError('Include the version you started editing.')
+        return lab.workspace.save(id,note_id,body['base_hash'],body.get('fields'),body.get('merge_heads'),title=body.get('title'))
 
     @app.get('/api/workspace/papers/{id}/notes/{note_id}/history')
     def workspace_history(id:str,note_id:str):return lab.workspace.history(id,note_id)
@@ -332,6 +462,33 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         from scripts.create_paper_workspace import portable_name
         title=lab.workspace.get(id)['title']
         return Response(lab.workspace.export(id),media_type='text/markdown',headers={'Content-Disposition':"attachment; filename*=UTF-8''"+quote(portable_name(title)+'.md')})
+
+    @app.post('/api/workspace/papers/{id}/latex-preview')
+    def workspace_latex_preview(id:str,body:dict):
+        from .workspace_latex import latex_preview
+        return latex_preview(lab.workspace,id,body)
+
+    @app.get('/api/workspace/papers/{id}/bibliography')
+    def workspace_bibliography(id:str):
+        from .workspace_latex import bibliography_catalogue
+        return bibliography_catalogue(lab.workspace,id)
+
+    @app.post('/api/workspace/papers/{id}/bibliography')
+    def workspace_bibliography_save(id:str,body:dict):
+        from .workspace_latex import save_bibliography
+        return save_bibliography(lab.workspace,id,body)
+
+    @app.post('/api/workspace/papers/{id}/bibliography/merge')
+    def workspace_bibliography_merge(id:str,body:dict):
+        from .workspace_latex import merge_bibliography
+        return merge_bibliography(lab.workspace,id,body)
+
+    @app.get('/api/workspace/literature')
+    def workspace_literature(q:str='',topic:str='',status:str='',scope:str='notes',offset:int=0):
+        return literature.search(q[:500],topic,status,scope,offset)
+
+    @app.get('/api/workspace/literature/{id}')
+    def workspace_literature_source(id:str):return literature.detail(id)
 
     @app.get('/api/workspace/papers/{id}/sources')
     def workspace_sources(id:str):return paper_sources.catalogue(id)
@@ -357,7 +514,7 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
     @app.get('/api/health')
     def health():
         import hashlib
-        return {'status':'ok','mode':'local','version':'0.16.0','application':'academic-writing-lab','instance_id':hashlib.sha256(str(store.path.resolve()).encode()).hexdigest()[:16]}
+        return {'status':'ok','mode':'local','version':'0.25.1','application':'academic-writing-lab','display_name':'Writing Lab','instance_id':hashlib.sha256(str(store.path.resolve()).encode()).hexdigest()[:16]}
 
     def sessions_summary():
         rows=store.rows('SELECT s.id,s.exercise_id,s.updated,s.version,e.payload,(SELECT count(*) FROM attempts a WHERE a.session_id=s.id) AS attempts FROM sessions s JOIN exercises e ON e.id=s.exercise_id ORDER BY s.updated DESC')
@@ -378,7 +535,7 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         for r in store.rows('SELECT * FROM exercises'):
             if r['pack_id'] in current or r['id'] in used:
                 e=lab.exercise(r);e['archived_version']=r['pack_id'] not in current;exercises.append(e)
-        return {'token':token,'packs':packs,'exercises':exercises,
+        return {'test_workspace':os.getenv('AWL_TEST_WORKSPACE')=='1','token':token,'packs':packs,'exercises':exercises,
                 'sessions':sessions_summary(),'profile':store.setting('profile',DEFAULT_PROFILE),'skills':SKILLS,
                 'references':lab.materials['references'],'vault':str(lab.vault),
                 'workspace':{'enabled':lab.workspace.status()['enabled'],'legacy_paper_id':lab.workspace.config().get('legacy_paper_id')},
@@ -392,6 +549,7 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         inventory=await providers.model_inventory(body.provider)
         if body.model not in [m['id'] for m in inventory['models']]:raise ValueError('Choose an available local text model.')
         if body.verifier_model and body.verifier_model not in [m['id'] for m in inventory['models']]:raise ValueError('Choose an installed local model for the second reading.')
+        if body.structure_model and body.structure_model not in [m['id'] for m in inventory['models']]:raise ValueError('Choose an installed local model for the Structure tutor.')
         store.set_setting('profile',body.model_dump());return body.model_dump()
 
     @app.post('/api/sessions')
@@ -417,6 +575,11 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         session=lab.get_session(attempt['session_id'])
         result={'saved':True,'attempt_id':attempt['id'],'session_id':session['id'],'version':session['version'],
                 'attempt_count':len(session['attempts']),'examples_unlocked':len(session['attempts'])>=2,**lab.check(attempt)}
+        exercise=json.loads(store.one('SELECT payload FROM exercises WHERE id=?',(session['exercise_id'],))['payload'])
+        if exercise.get('workspace_paper_id'):
+            from .paper_practice import apply_attempt
+            try:result['paper_save']=apply_attempt(lab,exercise['workspace_paper_id'],exercise['workspace_card_id'],attempt['id'])
+            except (Conflict,ValueError) as error:result['paper_save_error']=str(error)
         if feedback:
             try:result['job']=await lab.queue_review(attempt['id'],'review_revision' if attempt['parent_id'] else 'initial_hint','review-'+body.request_key)
             except ValueError as e:result['feedback_error']=str(e)
@@ -504,7 +667,11 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
     def companion_status():return companion.status()
 
     @app.get('/api/obsidian/guide')
-    def companion_guide():return FileResponse(ROOT/'docs/obsidian-ipad-guide.md',media_type='text/plain')
+    def companion_guide():
+        path=ROOT/'docs/obsidian-ipad-guide.md'
+        if not path.is_file():path=ROOT/'docs/portable-sync.md'
+        if not path.is_file():raise HTTPException(404,detail='The device guide is not included in this installation.')
+        return FileResponse(path,media_type='text/plain')
 
     @app.post('/api/obsidian/modules')
     def companion_export(body:CompanionModule):return companion.export_module(body.module_id)
@@ -571,7 +738,14 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
     def courses():return lab.curriculum.snapshot()
 
     @app.post('/api/course-completion-review')
-    def completion_review(body:CompletionReview):return lab.curriculum.acknowledge(body.attempt_id,body.reflection)
+    def completion_review(body:CompletionReview):
+        if len(body.reflection.strip())<10:raise ValueError('Write a short note about what you checked or changed (at least 10 characters).')
+        row=store.one('SELECT e.payload FROM attempts a JOIN sessions s ON s.id=a.session_id JOIN exercises e ON e.id=s.exercise_id WHERE a.id=?',(body.attempt_id,))
+        exercise=json.loads(row['payload']) if row else {}
+        if exercise.get('workspace_paper_id'):
+            from .paper_practice import apply_attempt
+            apply_attempt(lab,exercise['workspace_paper_id'],exercise['workspace_card_id'],body.attempt_id,complete=True)
+        return lab.curriculum.acknowledge(body.attempt_id,body.reflection)
 
     @app.get('/api/certificates/{kind}/{id}')
     def certificate(kind:str,id:str):
@@ -588,6 +762,11 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
 
     @app.post('/api/writing-questions')
     async def writing_question(body:WritingQuestion):return await lab.text_coach.queue(**body.model_dump())
+
+    @app.get('/api/writing-questions/history')
+    def writing_question_history(exercise_key:str='',paper_id:str='',card_id:str=''):
+        from .coaching_archive import question_history
+        return {'questions':question_history(store,exercise_key=exercise_key,paper_id=paper_id,card_id=card_id)}
 
     @app.get('/api/writing-questions/{id}')
     def writing_question_status(id:str):return lab.text_coach.job(id)
@@ -717,15 +896,18 @@ def create_app(data_dir=None,vault_root=None,auto_tutor=True):
         files={'portable':'portable-user-guide.md','draft-to-paper':'draft-to-paper-guide.md','argument-finder':'argument-map-and-passage-finder.md','wise-walkthrough':'wise-walkthrough-review.md','focus':'focused-writing-guide.md','wise-card-language':'wise-card-language-audit.md','wise-revision':'wise-revision-workflow.md','user-guide':'user-guide.md','learning-plan':'wise-learning-plan.md','advanced-english':'advanced-english-analysis.md',
                'reader-review':'wise-critical-reader-review.md','card-reviews':'wise-card-reviews.md','feedback-architecture':'feedback-architecture.md','feedback-validation':'feedback-validation.md'}
         if id not in files:raise HTTPException(404,detail='Guide not found.')
-        return FileResponse(ROOT/'docs'/files[id],media_type='text/markdown',filename=files[id])
+        path=ROOT/'docs'/files[id]
+        if not path.is_file():raise HTTPException(404,detail='This guide is not included in this installation. Open Help for the current setup guide.')
+        return FileResponse(path,media_type='text/markdown',filename=files[id])
 
     @app.get('/api/paper/readings/{id}')
     def paper_reading(id:str):
-        paths={b['id']:b['path'] for b in lab.paper.blueprint['books']}
-        paths.update({b['id']:b['path'] for b in lab.teaching.advanced['books']})
-        paths['OVERVIEW']=lab.paper.blueprint['overview_path']
-        path=Path(paths[id]) if id in paths else None
-        if not path or not path.is_file():raise ValueError('This supplied reading is not available on this Mac.')
+        from .readings import ReadingUnavailable, resolve_reading
+        paths={b['id']:b.get('path','') for b in lab.paper.blueprint.get('books',[])}
+        paths.update({b['id']:b.get('path','') for b in lab.teaching.advanced.get('books',[])})
+        if lab.paper.blueprint.get('overview_path'):paths['OVERVIEW']=lab.paper.blueprint['overview_path']
+        try:path=resolve_reading(id,paths,lab.vault)
+        except ReadingUnavailable as error:raise HTTPException(404,detail=str(error)) from error
         return FileResponse(path,media_type='application/pdf')
 
     @app.get('/api/teaching/phrasebook')

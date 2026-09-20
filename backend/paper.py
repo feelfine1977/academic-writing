@@ -9,6 +9,7 @@ class Paper:
         self.store=store
         from .assets import load
         self.blueprint=load(root,'wise/blueprint.json',{'nodes':[],'sections':{},'books':[],'title':'My paper'},vault)
+        self.writing_checks=load(root,'wise/writing_checks.json',{},vault)
         self.nodes={n['id']:n for n in self.blueprint['nodes']}
         self.cards={c['id']:c for c in load(root,'wise/cards.json',[],vault)}
         self.workbench=Workbench(self)
@@ -77,9 +78,10 @@ class Paper:
         issues=[]
         for id,a in selected.items():
             text=a['text'];node=self.nodes[id]
-            if node['section'] in ('I','II','III'):
-                terms=re.findall(r'\b(?:process norm|layers?|slices?|priority index|PI)\b',text,re.I)
-                if terms:issues.append({'node_id':id,'kind':'terminology','message':'Check whether '+', '.join(sorted(set(terms)))+' introduces WISE-specific formalism too early. The overview uses generic concepts in I–III; a conceptual preview is allowed in I.'})
+            for rule in self.writing_checks.get('terminology_checks',[]):
+                if node['section'] not in rule.get('sections',[]):continue
+                terms=re.findall(rule['pattern'],text,re.I)
+                if terms:issues.append({'node_id':id,'kind':'terminology','message':rule['message']+' Terms: '+', '.join(sorted(set(terms)))})
             if re.search(r'\[(?:citation|source|evidence|TODO)[^\]]*\]',text,re.I):
                 issues.append({'node_id':id,'kind':'evidence','message':'This selected version still contains an evidence or drafting placeholder.'})
             if re.search(r'\b(?:proves? causation|guarantees? savings|always improves|eliminates all)\b',text,re.I):

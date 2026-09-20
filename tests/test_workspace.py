@@ -68,6 +68,38 @@ def test_stale_editor_is_kept_without_overwriting_external_text(tmp_path):
     assert not merged['conflict']
 
 
+def test_support_revision_preserves_authored_text_and_review_state(tmp_path):
+    service=workspace(tmp_path);plan,card=make(service)
+    authored={'Manuscript prose':'My approved words.', 'Reasoning and decisions':'My judgement.',
+              'Completed prose hash':sha('My approved words.'),
+              'Selected review attempt':'review-3','Completion note':'Ready for export.'}
+    saved=service.save(plan['id'],card['id'],card['hash'],authored)
+    updated=service.save(plan['id'],card['id'],saved['hash'],{
+        'Academic reviewer guidance':'### Evidence\n\nA bounded claim with page references.',
+        'Flow and wording notes':'Connect this finding to the next argument.'})
+    assert all(updated['fields'][key]==value for key,value in authored.items())
+    assert updated['revision_id']!=saved['revision_id']
+    assert any(item['awl_id']==saved['revision_id'] for item in service.history(plan['id'],card['id']))
+    with pytest.raises(Conflict):
+        service.save(plan['id'],card['id'],saved['hash'],{'Academic reviewer guidance':'An older proposal.'})
+    reopened=service.card(plan['id'],card['id'])
+    assert reopened['fields']['Academic reviewer guidance']==updated['fields']['Academic reviewer guidance']
+    assert all(reopened['fields'][key]==value for key,value in authored.items())
+
+
+def test_title_revision_keeps_identity_path_fields_and_outline(tmp_path):
+    service=workspace(tmp_path);plan,card=make(service)
+    plan_before=Path(plan['path']).read_text()
+    updated=service.save(plan['id'],card['id'],card['hash'],{},title='Current argument title')
+    assert updated['title']=='Current argument title'
+    assert updated['id']==card['id'] and updated['path']==card['path']
+    assert updated['fields']==card['fields']
+    assert Path(plan['path']).read_text()==plan_before
+    with pytest.raises(ValueError):
+        service.save(plan['id'],card['id'],updated['hash'],{},title='Title\n## Manuscript prose\nOverwrite')
+    assert service.card(plan['id'],card['id'])['hash']==updated['hash']
+
+
 def test_offline_sibling_revisions_are_detected_after_sync(tmp_path):
     mac=workspace(tmp_path);plan,card=make(mac);win=workspace(tmp_path,'Windows')
     shutil.copytree(mac.root,win.root,dirs_exist_ok=True)
@@ -241,3 +273,17 @@ def test_open_folder_outside_managed_papers_registers_a_project(tmp_path):
     win=workspace(tmp_path,'Windows');shutil.copytree(service.lab.vault,win.lab.vault,dirs_exist_ok=True)
     assert win.catalogue()['papers'][0]['title']=='Ocean study'
     assert len(list((service.lab.vault/'06_Academic_Writing_Lab'/'Projects').glob('*.md')))==1
+
+
+def test_active_writing_idea_travels_with_section_without_modifying_prose(tmp_path):
+    mac=workspace(tmp_path);plan,_=make(mac)
+    section=mac.card(plan['id'],next(n['id'] for n in plan['nodes'] if n['type']=='section'))
+    steps=json.dumps([{'id':'opening','title':'Introduce the topic','points':['State the setting.']}])
+    saved=mac.save(plan['id'],section['id'],section['hash'],{'Section writing plan':steps,'Active writing idea':'opening','Writing intention':'Introduce the topic in my own words.'})
+    win=workspace(tmp_path,'Windows')
+    shutil.copytree(mac.root,win.root,dirs_exist_ok=True)
+    reopened=win.card(plan['id'],section['id'])
+    assert reopened['fields']['Active writing idea']=='opening'
+    assert reopened['fields'].get('Manuscript prose','')==section['fields'].get('Manuscript prose','')
+    with pytest.raises(ValueError,match='existing idea'):
+        mac.save(plan['id'],section['id'],saved['hash'],{'Active writing idea':'unknown'})

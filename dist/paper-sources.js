@@ -1,3 +1,4 @@
+import {renderPaperMarkdown,paperLinkResolver} from './paper-markdown.js';
 export function createPaperSourcesUI({api,esc,modal,toast}){
  const $=s=>document.querySelector(s);
  async function upload(paper){
@@ -13,12 +14,27 @@ export function createPaperSourcesUI({api,esc,modal,toast}){
  async function browse(paper,onMap){
   const sources=await api(`/workspace/papers/${paper}/sources`);
   modal('Find passages for this argument',`<p>Search the source text, read its neighbours, then choose its role. Linking a passage adds a source note; you decide what to write in your prose.</p><div class="paper-source-filters"><label class="field">Words to find<input id="paper-source-query" placeholder="e.g. business objectives"></label><label class="field">Manuscript or discussion<select id="paper-source-select"><option value="">All sources</option>${sources.sources.map(s=>`<option value="${esc(s.awl_id)}">${esc(s.title)}</option>`).join('')}</select></label><label class="field">Text colour<select id="paper-source-ink"><option value="all">All colours</option><option value="black">Black</option><option value="coloured">Coloured</option><option value="mixed">Mixed</option><option value="unknown">Unknown / text file</option><option value="agreed">Black, declared agreed</option></select></label></div><button class="btn" id="paper-source-search">Find passages</button><p id="paper-search-status" role="status"></p><div id="paper-source-results"></div>`);
+  const aliases=new Map(sources.sources.filter(s=>s.previous_note&&s.current_note).map(s=>[s.previous_note.replace(/\.md$/,''),s.current_note]));
+  function reader(text,item){
+   const source=sources.sources.find(x=>x.awl_id===item.source_id);if(!source)return esc(text);
+   const resolve=paperLinkResolver({uri:source.uri});
+   return renderPaperMarkdown(text,{resolve:(target,options)=>{
+    let value=target;
+    if(options?.wiki){const [path,...anchor]=target.split('#'),mapped=aliases.get(path.replace(/\.md$/,''));if(mapped)value=mapped+(anchor.length?'#'+anchor.join('#'):'');}
+    return resolve(value,options);
+   }});
+  }
+  function currentNote(item){
+   const source=sources.sources.find(x=>x.awl_id===item.source_id);if(!source?.current_note)return '';
+   const uri=new URL(source.uri);uri.searchParams.set('file',source.current_note);
+   return `<a class="paper-obsidian-link" href="${esc(uri.href)}">Open full note in Obsidian ↗</a>`;
+  }
   let generation=0;
   async function search(){const n=++generation;$('#paper-search-status').textContent='Searching…';try{
    const query=new URLSearchParams({q:$('#paper-source-query').value,ink:$('#paper-source-ink').value});if($('#paper-source-select').value)query.set('source_id',$('#paper-source-select').value);
    const data=await api(`/workspace/papers/${paper}/passages?${query}`);if(n!==generation||!$('#paper-source-results'))return;
    $('#paper-search-status').textContent=`${data.total} passages found${data.total>80?' · showing the first 80; narrow your search':''}. ${data.issues.join(' ')}`;
-   $('#paper-source-results').innerHTML=data.results.map((s,i)=>`<article class="card paper-source-result"><small>${esc(s.source_title)} · ${esc(s.locator)} · ${esc(s.ink)}</small><p class="prose">${esc(s.text)}</p><details><summary>Read before and after</summary><h4>Before</h4><p class="prose">${esc(s.before||'Start of this source.')}</p><h4>After</h4><p class="prose">${esc(s.after||'End of this source.')}</p></details>${onMap?`<label class="field">Use as<select data-map-kind="${i}"><option value="adapt">Adapt</option><option value="keep">Keep wording</option><option value="combine">Combine with another passage</option><option value="background">Background only</option></select></label><label class="field">Why it belongs here<input data-map-reason="${i}" placeholder="The idea or evidence it contributes"></label><button class="btn secondary" data-map-passage="${i}">Link to this argument</button>`:''}</article>`).join('')||'<p>No matching text. Try fewer words or a different colour filter.</p>';
+   $('#paper-source-results').innerHTML=data.results.map((s,i)=>`<article class="card paper-source-result"><small>${esc(s.source_title)} · ${esc(s.locator)} · ${esc(s.ink)}</small><div class="paper-markdown">${reader(s.text,s)}</div>${currentNote(s)}<details><summary>Read before and after</summary><h4>Before</h4><div class="paper-markdown">${reader(s.before||'Start of this source.',s)}</div><h4>After</h4><div class="paper-markdown">${reader(s.after||'End of this source.',s)}</div></details>${onMap?`<label class="field">Use as<select data-map-kind="${i}"><option value="adapt">Adapt</option><option value="keep">Keep wording</option><option value="combine">Combine with another passage</option><option value="background">Background only</option></select></label><label class="field">Why it belongs here<input data-map-reason="${i}" placeholder="The idea or evidence it contributes"></label><button class="btn secondary" data-map-passage="${i}">Link to this argument</button>`:''}</article>`).join('')||'<p>No matching text. Try fewer words or a different colour filter.</p>';
    document.querySelectorAll('[data-map-passage]').forEach(b=>b.onclick=async()=>{b.disabled=true;const i=Number(b.dataset.mapPassage),s=data.results[i];try{const value=await api(`/workspace/papers/${paper}/mapping`,{source_id:s.source_id,segment_id:s.id,decision:$(`[data-map-kind="${i}"]`).value,reason:$(`[data-map-reason="${i}"]`).value});onMap(value.text);b.textContent='Linked · source note added';toast('Passage linked. Your manuscript prose is unchanged.')}catch(e){$('#paper-search-status').textContent=e.message;b.disabled=false}});
   }catch(e){if($('#paper-search-status'))$('#paper-search-status').textContent=e.message}}
   $('#paper-source-search').onclick=search;$('#paper-source-query').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();search()}};await search();

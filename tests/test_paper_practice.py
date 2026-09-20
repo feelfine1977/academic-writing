@@ -16,3 +16,21 @@ def test_tutor_copy_can_return_only_to_its_unchanged_argument(tmp_path):
     from backend.feedback_context import task_context
     assert task_context(lab,exercise)['paper_context']['purpose']=='State what was observed.'
     with pytest.raises(Conflict):apply_attempt(lab,p['id'],card['id'],review['attempt_id'])
+
+
+def test_review_freezes_the_outline_revision_and_argument_scope(tmp_path):
+    vault=tmp_path/'Vault';(vault/'.obsidian').mkdir(parents=True)
+    lab=create_app(tmp_path/'data',vault,auto_tutor=False).state.lab;lab.workspace.configure(str(vault))
+    p=lab.workspace.create('A paper','## Argument: A bounded claim\n### Purpose\nState the observation.\n### Manuscript prose\nAn initial sentence.')
+    card=lab.workspace.card(p['id'],p['nodes'][0]['id'])
+    lab.workspace.save(p['id'],card['id'],card['hash'],{'Main message':'Report the observation.','Scope and boundaries':'Do not infer cause.'})
+    first=prepare(lab,p['id'],card['id'])
+    p=lab.workspace.get(p['id'])
+    lab.workspace.save(p['id'],p['id'],p['hash'],{'Outline revision':'September proposal'})
+    second=prepare(lab,p['id'],card['id'])
+    assert first['exercise_key']!=second['exercise_key']
+    payload=lab.exercise(lab.store.one('SELECT * FROM exercises WHERE id=?',(second['exercise_key'],)))
+    assert payload['workspace_context']['outline_revision']=='September proposal'
+    assert payload['workspace_context']['scope_and_boundaries']=='Do not infer cause.'
+    prior=lab.exercise(lab.store.one('SELECT * FROM exercises WHERE id=?',(first['exercise_key'],)))
+    assert prior['workspace_context']['outline_revision']==''

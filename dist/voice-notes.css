@@ -1,0 +1,56 @@
+.voice-drawer {position:fixed;inset:0 0 0 auto;margin:0;width:min(760px,96vw);height:100dvh;max-height:100dvh;max-width:96vw;border:0;border-left:1px solid #d4dfdf;padding:0;background:#fcfdfb;color:#263745;box-shadow:-12px 0 50px #172e3133;box-sizing:border-box;overflow:auto}
+.voice-drawer::backdrop {background:#152a3659}
+.voice-head {position:sticky;top:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;background:#f2f7f4;padding:22px 26px;border-bottom:1px solid #d5e2dc}
+.voice-head h2 {font-size:27px;margin:5px 0 8px;line-height:1.25}
+.voice-head p {margin:0;line-height:1.5;font-size:15px}
+.voice-kicker {font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:#4c7167;font-weight:700}
+.voice-body {padding:22px 26px 40px;font-size:16px;line-height:1.6}
+.voice-body>.tiny,.voice-body .tiny {font-size:13px;color:#5d706a;line-height:1.6}
+.voice-record-tools {display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:22px 0 10px}
+.voice-record-tools .field {flex:1 1 160px;max-width:220px;margin:0}
+.voice-record-tools .btn {min-height:45px}
+.voice-record-button {background:#af3735!important;border-color:#af3735!important}
+.voice-recording {display:flex;align-items:center;gap:12px;background:#fff1ed;border:1px solid #d8877e;color:#902e2e;border-radius:10px;padding:14px 16px;margin:18px 0}
+.voice-recording[hidden],.voice-drawer [hidden] {display:none!important}
+.voice-recording-dot {width:11px;height:11px;background:#c33131;border-radius:50%;box-shadow:0 0 0 5px #c3313118}
+.voice-recording[data-state="paused"] {color:#765426;background:#fff6e7;border-color:#cfb078}
+.voice-recording[data-state="paused"] .voice-recording-dot {background:#a77736}
+#voice-duration {margin-left:auto;font:700 21px ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.voice-notice {font-size:14px;line-height:1.65;white-space:pre-line}
+.voice-notice.error,.voice-error {color:#9b342f;background:#fff0eb;padding:12px;border-radius:8px}
+.voice-setup,.voice-history {margin:18px 0;padding:14px 0;border-top:1px solid #dae4df}
+.voice-drawer summary {font-weight:650;color:#315e55;cursor:pointer;min-height:28px}
+#voice-editor {border:1px solid #d5e2dc;background:white;border-radius:13px;padding:20px;margin-top:20px}
+#voice-editor h3 {font-size:21px;line-height:1.35;margin:0 0 10px}
+#voice-editor audio {display:block;width:100%;margin:14px 0}
+#voice-editor .field {margin:18px 0 10px}
+#voice-editor textarea {font-family:inherit;font-size:18px;line-height:1.7;width:100%;box-sizing:border-box;resize:vertical;min-height:110px}
+#voice-corrected {min-height:250px!important}
+#voice-editor .actions {display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}
+#voice-editor .actions>.btn {font-size:14px;line-height:1.4}
+.voice-note-state {color:#376f60;font-weight:650;font-size:14px}
+.voice-original {white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:15px;line-height:1.7;background:#f4f6f4;padding:14px;border-radius:8px}
+.voice-segment {display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;font:inherit;font-size:14px;line-height:1.6;padding:10px;border:0;border-bottom:1px solid #dde5df;background:white;color:#344453;cursor:pointer}
+.voice-segment span {flex:0 0 45px;color:#256b5b;font-variant-numeric:tabular-nums}
+.voice-segment:hover,.voice-history-item:hover {background:#eff5f1}
+.voice-history-item {display:block;width:100%;text-align:left;border:1px solid #d9e2df;border-radius:10px;padding:12px 14px;margin-top:10px;background:white;color:#344453;cursor:pointer;font:inherit;font-size:15px}
+.voice-history-item span,.voice-history-item small {display:block;margin-top:4px;font-size:13px;color:#667870}
+.voice-history-item.selected {border-color:#2c7664;background:#f0f7f2}
+.voice-history-item.voice-trashed {border-style:dashed;background:#f7f5f1}
+.voice-trash-filter {display:flex;align-items:center;gap:9px;font-size:14px;margin:14px 0 8px}
+.voice-trash-filter input,.voice-merge-picker input {width:18px;height:18px;flex:0 0 18px}
+.voice-manage,.voice-record-options,.voice-provenance {padding:14px 0;margin-top:14px;border-top:1px solid #d9e3dd}
+.voice-trash-button {color:#963b33!important}
+.voice-merge-picker {display:grid;gap:8px;margin:14px 0}
+.voice-merge-picker label {display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid #d5e1d9;border-radius:9px;background:white;font-size:14px;line-height:1.5}
+.voice-merge-picker small {display:block;color:#697970;font-variant-numeric:tabular-nums}
+.voice-merge-order {padding-left:25px;margin:12px 0}
+.voice-merge-order li {padding:8px 0;font-size:14px;line-height:1.5}
+.voice-merge-order li>span {display:block;margin-bottom:4px}
+.voice-merge-order .btn {font-size:12px;padding:7px 10px;margin-right:5px;min-height:32px}
+.voice-manage .field {margin:16px 0 10px}
+.voice-manage input[type="text"],#voice-merge-title {box-sizing:border-box;width:100%;font:inherit;font-size:15px}
+.voice-recover-row {padding:12px;border:1px solid #e0c7a0;border-radius:8px;background:#fff8e9;margin:8px 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.voice-recover-row>span {flex-basis:100%;font-size:14px}
+.sw-speak {white-space:nowrap}
+@media(max-width:620px){.voice-drawer{width:100vw;max-width:100vw}.voice-head{padding:18px}.voice-body{padding:18px}.voice-record-tools .field{max-width:none;flex-basis:100%}#voice-editor{padding:14px}}

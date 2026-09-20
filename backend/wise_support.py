@@ -1,38 +1,22 @@
 """Transparent card-to-lesson mapping; risk cues are questions, not research verdicts."""
 import re
 
-# Newly supplied discussion and crosswalk motivate these checks. They do not
-# establish implementation facts independently; every hit retains source wording.
+# Paper-specific patterns and node guidance belong to the private vault catalogue.
+# Public code keeps only broadly applicable writing checks.
 CHECKS=[
- ('guardrails',r'\b(?:guardrails?|hard constraints?|non.?compensatory|veto)\b','conditions','Separate a required condition from a weighted preference. Check whether a distinct veto or constraint is implemented; a large weight alone is not one.'),
- ('benefit',r'\b(?:savings|benefit|impact per|intervention|actionable)\b','causality','Distinguish a candidate for review from a chosen intervention or a demonstrated benefit. Name the extra evidence an effect or cost claim would need.'),
- ('loop',r'\b(?:loop|bidirectional|two translations|handover)\b','method-rationale','Distinguish WISE’s connected norm-and-scoring design from the wider improvement cycle. Explain why each method step is needed; a practitioner journey is not automatically the paper’s argument.'),
- ('absolute-gap',r'\b(?:no (?:existing|prior|method)|not directly composable|does not provide|lack(?:s|ing)?|integration gap)\b','gap','State the exact integration still unresolved in the reviewed approaches. Check counterexamples such as executable PPIs and DECLARE tooling before claiming an absence.'),
- ('priority',r'\b(?:priority index|relative shortfall|below the norm|PI)\b','quantities','Name the baseline, population and exposure. Check whether the quantity describes relative shortfall, absolute norm burden, or intervention effect; these differ.'),
- ('governance',r'\b(?:governance|reproducib\w*|rerunnable|deterministic|ownership)\b','limitations','Separate repeatable calculation from demonstrated robustness, stakeholder approval or ownership. Mark proposed governance fields as proposals where appropriate.'),
- ('explanation',r'\b(?:decompos\w*|causal|explanation|layer mass)\b','interpretation','Specify what the explanation explains: an additive penalty, a relative priority or a causal effect. Compare against the relevant baseline before drawing a stronger conclusion.'),
+ ('benefit',r'\b(?:benefit|intervention|causal)\b','causality','Distinguish an observation, a recommendation and a demonstrated effect. State what the supplied evidence supports.'),
+ ('absolute-gap',r'\b(?:no existing|no prior|none|lack(?:s|ing)?)\b','gap','Check the scope of an absence claim and consider relevant counterexamples.'),
+ ('explanation',r'\b(?:explanation|causal)\b','interpretation','State what the explanation establishes and what still needs evidence.'),
 ]
+
+
+def paper_checks(lab):
+    from .assets import load
+    return load(lab.root,'wise/writing_checks.json',{'checks':CHECKS,'focus':{}},lab.vault)
+
 CATEGORIES={'scope':'scope','structure':'information-flow','terminology':'definitions','reasoning':'premises','evidence':'attribution','reference':'reference','grammar':'concision'}
 SECTION={'I':['problem','premises','transitions'],'II':['compare-sources','gap','attribution'],'III':['method-rationale','conditions','definitions'],
          'IV':['definitions','method-rationale','quantities'],'V':['results','interpretation','quantities'],'VI':['limitations','recommendations','scope'],'AB':['abstract','concision','scope']}
-FOCUS={
- 'I-01':('premises','Limited capacity explains the need to choose; it does not establish which evidence should guide the choice.'),
- 'I-06':('method-rationale','Explain how norm definition produces evidence already aligned with business intent, rather than promising two independent translation tools.'),
- 'I-08':('scope','State the technical contribution that the evaluation can support. Keep broader improvement benefits separate.'),
- 'II-A2':('gap','Acknowledge existing support for defining executable indicators and constraints before naming what your integration adds.'),
- 'II-A4':('causality','Use the missing intervention or implementation evidence to explain the boundary between insight and improvement.'),
- 'II-A5':('attribution','Label the need for explicit priority judgement as your synthesis where no single source states the whole argument.'),
- 'II-A6':('limitations','Distinguish a reconstructable calculation from a validated governance process.'),
- 'II-B1':('attribution','Preserve what measurement and PPI research already establishes. Explain separately which additional connection your design supplies; do not turn a source contribution into your own novelty claim.'),
- 'II-B3':('conditions','Check whether guardrails are a needed capability, an implemented veto, or future work; the older target title does not settle this.'),
- 'III-S3':('conditions','Keep desired hard constraints separate from the present compensatory score.'),
- 'IV-M3':('conditions','The expanded crosswalk flags separate hard guardrails as an extension. Do not describe them as implemented solely because they appear in this older target.'),
- 'IV-M4':('interpretation','Explain additive norm burden and baseline-centred priority differences separately.'),
- 'IV-M5':('quantities','Define relative shortfall and the count or exposure multiplier before interpreting PI.'),
- 'IV-M6':('limitations','State which records the current implementation retains and which governance fields remain proposed.'),
- 'IV-FLOW':('method-rationale','Justify each computational phase from the coupled norm-and-scoring design. Keep contextual feedback outside the algorithm.'),
- 'VI-02':('scope','Separate demonstrated technical contributions from unvalidated process-improvement benefits.'),
-}
 
 def lesson(lab,id,reason,quote='',source=None):
     move=next(m for m in lab.teaching.advanced['moves'] if m['id']==id)
@@ -41,9 +25,9 @@ def lesson(lab,id,reason,quote='',source=None):
             'reading':move['reading'],'practice_key':move['practice_key'],
             'warmup_key':move['practice_key'].replace('-Q04','-Q01')}
 
-def scan(text):
+def scan(text,checks=None):
     hits=[]
-    for id,pattern,move,reason in CHECKS:
+    for id,pattern,move,reason in (CHECKS if checks is None else checks):
         match=re.search(pattern,text,re.I)
         if match:
             start=max(text.rfind('\n',0,match.start())+1,text.rfind('. ',0,match.start())+2,0)
@@ -57,7 +41,7 @@ def scan(text):
 def card_support(lab,card_id):
     if card_id not in lab.paper.cards:raise ValueError('Source card not found.')
     card=lab.paper.cards[card_id];review=lab.teaching.review(card_id);text=card['latex']
-    findings=scan(text)
+    findings=scan(text,paper_checks(lab).get('checks',CHECKS))
     tips=[lesson(lab,h['move'],h['reason'],h['quote'],card_id) for h in findings]
     stale=review.get('stale',True)
     for f in review.get('findings',[]) if not stale else []:
@@ -75,8 +59,9 @@ def card_support(lab,card_id):
 def node_support(lab,node_id):
     n=lab.paper.node(node_id);selected=lab.paper.state()['nodes'].get(node_id,{}).get('source_ids',[])
     cards=selected or n['source_card_ids'];tips=[]
-    if node_id in FOCUS:
-        id,reason=FOCUS[node_id];tips.append(lesson(lab,id,reason,source='New discussion / expanded crosswalk'))
+    focus=paper_checks(lab).get('focus',{})
+    if node_id in focus:
+        id,reason=focus[node_id];tips.append(lesson(lab,id,reason,source='New discussion / expanded crosswalk'))
     ordered=sorted(cards,key=lambda id:lab.teaching.reviews.get(id,{}).get('material_type')!='prose')
     prose=[id for id in ordered if lab.teaching.reviews.get(id,{}).get('material_type')=='prose']
     for id in (prose or ordered):

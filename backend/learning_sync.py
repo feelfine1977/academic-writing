@@ -47,6 +47,7 @@ class LearningSync:
 
     def export(self):
         store=self.store
+        from .coaching_archive import portable_question
         for p in store.rows('SELECT * FROM packs'):
             pack=json.loads(p['payload'])
             self.write('Knowledge',pack['title']+' · v'+str(pack['version']),{'pack':p,'exercises':store.rows('SELECT * FROM exercises WHERE pack_id=?',(p['id'],))},'Original exercise pack and answer records for use on your other computer.')
@@ -72,6 +73,10 @@ class LearningSync:
                     if j['attempt_id']==a['id']:
                         readable += ['### Tutor feedback','', '```json',json.dumps(json.loads(j['result']),ensure_ascii=False,indent=2),'```','']
             self.write('Writing practice',exercise['title'],data,'\n'.join(readable))
+        for row in store.rows("SELECT payload FROM settings WHERE id LIKE 'writing_question:%'"):
+            job=portable_question(json.loads(row['payload']))
+            readable='## My question\n\n'+job['question']+'\n\n## Text discussed\n\n'+job['text']+'\n\n## Tutor response\n\n'+json.dumps(job.get('result'),ensure_ascii=False,indent=2)
+            self.write('Writing questions',job['question'][:90],job,readable)
 
     @staticmethod
     def insert(db,table,row):
@@ -123,6 +128,9 @@ class LearningSync:
                     if id not in {a['id'] for a in data['attempts']} or review.get('basis')!='learner_criteria_review':raise ValueError('Invalid completion record.')
                     if id not in records:records[id]=review
                 db.execute("INSERT INTO settings VALUES('writing_completion_reviews',?) ON CONFLICT(id) DO UPDATE SET payload=excluded.payload",(dump(records),))
+            elif kind=='Writing questions':
+                from .coaching_archive import import_question
+                import_question(db,data)
             else:raise ValueError('Unknown learning record kind.')
 
     def sync(self):
@@ -136,7 +144,7 @@ class LearningSync:
                 # Always publish this device's saved work before reading remote
                 # additions, so a failed import never strands local answers.
                 self.export();issues=[];imported=0
-                for kind in ('Knowledge','Research sources','Writing practice'):
+                for kind in ('Knowledge','Research sources','Writing practice','Writing questions'):
                     for path in sorted((self.root/kind).glob('*.md')):
                         try:
                             path=self.workspace.safe(path);stat=path.stat();signature=(stat.st_mtime_ns,stat.st_size)
